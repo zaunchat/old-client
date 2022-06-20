@@ -1,6 +1,6 @@
 import { FunctionalComponent, h } from "preact";
 
-const LandingPage: FunctionalComponent = () => {
+export const LandingPage: FunctionalComponent = () => {
   return (
     <div>
      Welcome to the <span style={{"fontWeight": "bold"}}>Landing</span> page
@@ -8,4 +8,3 @@ const LandingPage: FunctionalComponent = () => {
   );
 };
 
-export default LandingPage;
