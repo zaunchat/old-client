@@ -1,8 +1,23 @@
 
 ##  🗺 Roadmap
 
-😴...
-
+- TODO: add api for the roadmap
+ - [ ] Pages
+    - [ ] Landing page
+      - soon
+    - [ ] Dashboard page
+      - [ ] Servers side bar
+      - [ ] Server (channels) side bar
+        - [ ] Top bar components
+        - [ ] Channels components
+        - [ ] User bar
+      - [ ] Playgroud (chat)
+        - [ ] Top bar
+        - [ ] message components
+        - [ ] input box 
+      - [ ] Members side bar
+    - [ ] Error page
+ 
 ## 🏃‍♀️ Run Locally
 
 Clone the project
