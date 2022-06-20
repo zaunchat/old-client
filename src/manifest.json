@@ -1,0 +1,11 @@
+{
+  "name": "Itchat",
+  "short_name": "client",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "",
+  "theme_color": "",
+
+  "icons": []
+}
