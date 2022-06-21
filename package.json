@@ -4,9 +4,10 @@
   "version": "0.0.2",
   "license": "MIT",
   "scripts": {
-    "build": "preact build",
-    "serve": "sirv build --port 8080 --cors --single",
-    "dev": "preact watch",
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
     "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
     "test": "jest ./tests",
     "release": "standard-version"
@@ -25,7 +26,8 @@
     "preact": "^10.3.1",
     "preact-render-to-string": "^5.1.4",
     "preact-router": "^3.2.1",
-    "standard-version": "^9.5.0"
+    "standard-version": "^9.5.0",
+    "vite": "^2.9.12"
   },
   "devDependencies": {
     "@types/enzyme": "^3.10.5",

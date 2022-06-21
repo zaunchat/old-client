@@ -3,3 +3,5 @@ node_modules
 /*.log
 pnpm-lock.yaml
 .vscode 
+build
+size-plugin.json
