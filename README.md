@@ -5,7 +5,7 @@
  - [ ] Pages
     - [ ] Landing page
       - soon
-    - [ ] Dashboard page
+    - [ ] App page
       - [ ] Servers side bar
       - [ ] Server (channels) side bar
         - [ ] Top bar components
