@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.3](https://github.com/itchatapp/client/compare/v0.0.2...v0.0.3) (2022-06-23)
+
+
+### Features
+
+* styles declaration ([0cb4677](https://github.com/itchatapp/client/commit/0cb4677460886cda67d10fc5fe3c3ef7529e4ceb))
+* styling servers sidebar is done ([9db552a](https://github.com/itchatapp/client/commit/9db552abbb085c484ec2a3c50ed1f3b070332053))
+* use vite for builds and development ([4da4172](https://github.com/itchatapp/client/commit/4da4172bfb2a777fa8ee4c19535bbf56c0850b88))
+
 ### 0.0.2 (2022-06-21)
 
 
