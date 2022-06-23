@@ -7,7 +7,7 @@
     - [ ] Landing page
       - soon
     - [ ] App page
-      - [ ] Servers side bar
+      - [X] Servers side bar
       - [ ] Server (channels) side bar
         - [ ] Top bar components
         - [ ] Channels components

@@ -1,0 +1,59 @@
+.serversSidebar {
+  background-color: #15151c;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 95px;
+  overflow-y: scroll;
+}
+.serversSidebar::-webkit-scrollbar {
+  display: none;
+}
+.serversSidebarContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon {
+  margin: calc(15px / 2);
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  background: #1a1a20;
+  width: 55px;
+  height: 55px;
+  border-radius: 100%;
+}
+/* .serverIcon {
+} */
+.serverIconImg {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+.searchIcon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.addIcon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* .homeIcon {
+} */
+
+.divider {
+  margin: calc(15px / 2);
+  background-color: rgba(255, 255, 255, 0.07);
+  position: relative;
+  width: 55px;
+  height: 1px;
+}

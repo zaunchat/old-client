@@ -1,0 +1,10 @@
+.membersSidebar {
+  position: fixed;
+  right: 0;
+  top: 95px;
+  background: #121219;
+  height: 100%;
+  width: 345px;
+}
+.membersSidebarContainer {
+}

@@ -1,0 +1,40 @@
+.channelBar {
+  position: fixed;
+  right: 0;
+  width: calc(100% - (345px + 95px));
+  background-color: rgba(0, 0, 0, 0.2);
+  height: 95px;
+}
+.channelBarContainer {
+}
+.hash {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    
+    display: flex;
+    align-items: center;
+    
+    color: rgba(255, 255, 255, 0.5);
+}
+.divider {
+    width: 3px;
+    height: 23px;
+
+    background: rgba(217, 217, 217, 0.3);
+}
+.name {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 48px;
+    /* identical to box height */
+    
+    display: flex;
+    align-items: center;
+    
+    color: #FFFFFF;
+}
