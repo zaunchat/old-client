@@ -63,7 +63,8 @@
   display: flex;
   align-items: center;
 }
-.textChannel:hover, .voiceChannel:hover {
+.textChannel:hover,
+.voiceChannel:hover {
   background-color: rgba(255, 255, 255, 0.04);
   border-radius: 5px;
 }
@@ -71,7 +72,7 @@
   font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
-  font-size: 22px;
+  font-size: 20px;
   line-height: 33px;
   /* identical to box height */
 
@@ -86,7 +87,7 @@
   font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
-  font-size: 22px;
+  font-size: 20px;
   line-height: 33px;
   /* identical to box height */
 
@@ -131,11 +132,24 @@
 
   color: rgba(255, 255, 255, 0.33);
 }
+.category:hover .categoryName {
+  color: rgba(255, 255, 255, 0.66);
+}
+
+.category:hover .categoryIcon svg path {
+  stroke-opacity: 0.44 !important;
+}
+
+.createIcon:hover svg path {
+  stroke-opacity: 0.44 !important;
+}
+
 .categoryIcon {
   position: absolute;
   left: 27px;
 }
 .category {
+  cursor: pointer;
   position: relative;
   height: 23px;
   display: flex;
