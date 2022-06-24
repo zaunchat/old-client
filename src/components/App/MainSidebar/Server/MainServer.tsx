@@ -1,7 +1,7 @@
 import { h } from "preact";
 import { useState } from "preact/hooks";
 import styles from "../../../../styles/App/MainSidebar.module.css";
-import { Channels } from "./channels";
+import { Channels } from "./Channels";
 export const MainServer = ({
   name,
   banner,
