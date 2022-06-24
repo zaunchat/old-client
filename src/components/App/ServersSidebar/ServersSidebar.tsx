@@ -14,51 +14,6 @@ export const ServersSidebar = () => {
         <Server
           icon="https://cdn.discordapp.com/avatars/845311131191214094/78db48f99ba4d8dbea0a5ce75ffd32d8.png?size=1024"
           active={false}
-        /><Server
-        icon="https://cdn.discordapp.com/avatars/845311131191214094/78db48f99ba4d8dbea0a5ce75ffd32d8.png?size=1024"
-        active={false}
-      /><Server
-      icon="https://cdn.discordapp.com/avatars/845311131191214094/78db48f99ba4d8dbea0a5ce75ffd32d8.png?size=1024"
-      active={false}
-    /><Server
-    icon="https://cdn.discordapp.com/avatars/845311131191214094/78db48f99ba4d8dbea0a5ce75ffd32d8.png?size=1024"
-    active={false}
-  /><Server
-  icon="https://cdn.discordapp.com/avatars/845311131191214094/78db48f99ba4d8dbea0a5ce75ffd32d8.png?size=1024"
-  active={false}
-/><Server
-          icon="https://cdn.discordapp.com/avatars/845311131191214094/78db48f99ba4d8dbea0a5ce75ffd32d8.png?size=1024"
-          active={false}
-        /><Server
-        icon="https://cdn.discordapp.com/avatars/845311131191214094/78db48f99ba4d8dbea0a5ce75ffd32d8.png?size=1024"
-        active={false}
-      /><Server
-      icon="https://cdn.discordapp.com/avatars/845311131191214094/78db48f99ba4d8dbea0a5ce75ffd32d8.png?size=1024"
-      active={false}
-    /><Server
-    icon="https://cdn.discordapp.com/avatars/845311131191214094/78db48f99ba4d8dbea0a5ce75ffd32d8.png?size=1024"
-    active={false}
-  /><Server
-  icon="https://cdn.discordapp.com/avatars/845311131191214094/78db48f99ba4d8dbea0a5ce75ffd32d8.png?size=1024"
-  active={false}
-/><Server
-          icon="https://cdn.discordapp.com/avatars/845311131191214094/78db48f99ba4d8dbea0a5ce75ffd32d8.png?size=1024"
-          active={false}
-        /><Server
-        icon="https://cdn.discordapp.com/avatars/845311131191214094/78db48f99ba4d8dbea0a5ce75ffd32d8.png?size=1024"
-        active={false}
-      /><Server
-      icon="https://cdn.discordapp.com/avatars/845311131191214094/78db48f99ba4d8dbea0a5ce75ffd32d8.png?size=1024"
-      active={false}
-    /><Server
-    icon="https://cdn.discordapp.com/avatars/845311131191214094/78db48f99ba4d8dbea0a5ce75ffd32d8.png?size=1024"
-    active={false}
-  /><Server
-  icon="https://cdn.discordapp.com/avatars/845311131191214094/78db48f99ba4d8dbea0a5ce75ffd32d8.png?size=1024"
-  active={false}
-/><Server
-          icon="https://cdn.discordapp.com/avatars/845311131191214094/78db48f99ba4d8dbea0a5ce75ffd32d8.png?size=1024"
-          active={false}
         />
         <Search />
         <Add />
