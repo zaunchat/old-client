@@ -6,8 +6,14 @@
   height: 95px;
 }
 .channelBarContainer {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
 }
 .hash {
+    position: absolute;
+    left: 25px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
@@ -20,12 +26,16 @@
     color: rgba(255, 255, 255, 0.5);
 }
 .divider {
+    position: absolute;
+    left: 75px;
     width: 3px;
     height: 23px;
 
     background: rgba(217, 217, 217, 0.3);
 }
 .name {
+    position: absolute;
+    left: 113px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;

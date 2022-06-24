@@ -5,8 +5,207 @@
   width: 345px;
   height: 100%;
   background: #121219;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
-.mainSidebarContainer {
-    
+.mainSidebar::-webkit-scrollbar {
+  display: none;
+}
+
+/* .mainSidebarContainer {
+} */
+.mainServer {
+  user-select: none;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.banner {
+  width: 100%;
+}
+.title {
+  cursor: pointer;
+  position: absolute;
+  left: 53px;
+  top: 30px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 38px;
+  display: flex;
+  align-items: center;
+
+  color: #ffffff;
+}
+.badge {
+  cursor: pointer;
+  position: absolute;
+  top: 37px;
+  left: 19px;
+}
+.menu {
+  cursor: pointer;
+  position: absolute;
+  top: 37px;
+  right: 19px;
+}
+.activeChannel {
+  background-color: rgba(255, 255, 255, 0.04);
+  border-radius: 5px;
+}
+.textChannel {
+  cursor: pointer;
+  position: relative;
+  width: 303px;
+  height: 39px;
+  display: flex;
+  align-items: center;
+}
+.textChannel:hover, .voiceChannel:hover {
+  background-color: rgba(255, 255, 255, 0.04);
+  border-radius: 5px;
+}
+.textName {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 33px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+
+  color: rgba(255, 255, 255, 0.29);
+}
+.voiceName {
+  position: absolute;
+  left: 39px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 33px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+
+  color: rgba(255, 255, 255, 0.29);
+}
+
+.textIcon {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  left: 10px;
+}
+.textName {
+  position: absolute;
+  left: 39px;
+}
+.textChannelContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: 6px;
+}
+.voiceChannelContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: 6px;
+}
+.categoryName {
+  position: absolute;
+  left: 47px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+
+  color: rgba(255, 255, 255, 0.33);
+}
+.categoryIcon {
+  position: absolute;
+  left: 27px;
+}
+.category {
+  position: relative;
+  height: 23px;
+  display: flex;
+  width: 100%;
+  margin-top: 6px;
+}
+.createIcon {
+  position: absolute;
+  left: 302px;
+}
+
+.voiceIcon {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 10px;
+}
+.voiceChannel {
+  cursor: pointer;
+  position: relative;
+  width: 303px;
+  height: 39px;
+  display: flex;
+  align-items: center;
+}
+
+.voiceMembers {
+  display: flex;
+  flex-direction: column;
+}
+
+.voiceMemberContainer {
+  position: relative;
+  width: 100%;
+  height: 42px;
+  margin-top: 5px;
+}
+.voiceMember {
+  cursor: pointer;
+  position: absolute;
+  right: 21px;
+  border-radius: 5px;
+  width: 260px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+}
+.voiceMember:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+.voiceMemberIcon {
+  position: absolute;
+  left: 10px;
+  border-radius: 100%;
+  width: 32px;
+  height: 32px;
+}
+
+.voiceMemberName {
+  position: absolute;
+  left: 52px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+
+  color: rgba(255, 255, 255, 0.29);
 }
