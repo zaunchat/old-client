@@ -9,13 +9,13 @@
     - [ ] App page
       - [X] Servers side bar
       - [ ] Server (channels) side bar
-        - [ ] Top bar components
-        - [ ] Channels components
+        - [X] Top bar components
+        - [X] Channels components
         - [ ] User bar
       - [ ] Playgroud (chat)
         - [ ] Top bar
         - [ ] message components
-        - [ ] input box 
+        - [ ] chat box 
       - [ ] Members side bar
     - [ ] Error page
  
