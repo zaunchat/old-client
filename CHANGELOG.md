@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.4](https://github.com/itchatapp/client/compare/v0.0.3...v0.0.4) (2022-06-24)
+
+
+### Features
+
+* add home icon to the servers sidebar ([8edbc74](https://github.com/itchatapp/client/commit/8edbc748daeefdc038c354523b0c051687a61b66))
+* main sidebar is done ([3ea871a](https://github.com/itchatapp/client/commit/3ea871a2fa69c5601fdab03a1424a8807163b9a7))
+
+
+### Bug Fixes
+
+* remove servers from testing ([3269fe4](https://github.com/itchatapp/client/commit/3269fe4ef307e4d93f82291256a218d94daa283f))
+
 ### [0.0.3](https://github.com/itchatapp/client/compare/v0.0.2...v0.0.3) (2022-06-23)
 
 

@@ -1,11 +1,11 @@
 {
   "private": true,
   "name": "client",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "license": "MIT",
   "scripts": {
-    "start": "vite",
-    "dev": "vite",
+    "start": "vite --host",
+    "dev": "preact watch",
     "build": "vite build",
     "serve": "vite preview",
     "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
