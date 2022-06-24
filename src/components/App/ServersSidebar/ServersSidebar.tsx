@@ -18,6 +18,12 @@ export const ServersSidebar = () => {
           icon="https://cdn.discordapp.com/avatars/845311131191214094/78db48f99ba4d8dbea0a5ce75ffd32d8.png?size=1024"
           active={false}
         />
+
+<Server
+          name="Codestation"
+          icon=""
+          active={false}
+        />
         <Search />
         <Add />
       </div>

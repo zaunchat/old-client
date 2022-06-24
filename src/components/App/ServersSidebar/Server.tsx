@@ -1,4 +1,4 @@
-import { Center, Paper, Popper, useMantineTheme } from "@mantine/core";
+import { Avatar } from "@mantine/core";
 import { h } from "preact";
 import { useState } from "preact/hooks";
 import { Tooltip } from "../..";
@@ -38,7 +38,7 @@ export const Server = ({
           ref={setReferenceElement! as any}
           className={styles.serverIcon}
         >
-          <img className={styles.serverIconImg} src={icon} alt="" />
+          <Avatar className={styles.serverIconImg} radius="xl" src={icon}>{name[0]}</Avatar>
         </div>
       </div>
     </div>
