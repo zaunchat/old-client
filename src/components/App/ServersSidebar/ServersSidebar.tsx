@@ -1,6 +1,4 @@
-import { Center, Paper, Popper, useMantineTheme } from "@mantine/core";
 import { h } from "preact";
-import { useState } from "preact/hooks";
 import styles from "../../../styles/App/ServersSidebar.module.css";
 import { Add } from "./Add";
 import { Divider } from "./Divider";
@@ -19,11 +17,7 @@ export const ServersSidebar = () => {
           active={false}
         />
 
-<Server
-          name="Codestation"
-          icon=""
-          active={false}
-        />
+        <Server name="Codestation" icon="" active={false} />
         <Search />
         <Add />
       </div>
