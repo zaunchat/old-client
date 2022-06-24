@@ -1,5 +1,4 @@
 name: Build
-description: Builds a project instance, assuming all the correct project files are in the build folder
 
 on: [push, pull_request]
 jobs:
