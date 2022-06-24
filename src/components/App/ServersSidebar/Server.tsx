@@ -38,7 +38,7 @@ export const Server = ({
           ref={setReferenceElement! as any}
           className={styles.serverIcon}
         >
-          <Avatar className={styles.serverIconImg} radius="xl" src={icon}>{name[0]}</Avatar>
+          <Avatar className={styles.serverIconImg} radius="xl" src={icon}>{name[0].toUpperCase()}</Avatar>
         </div>
       </div>
     </div>

@@ -203,9 +203,6 @@
 .voiceMemberIcon {
   position: absolute;
   left: 10px;
-  border-radius: 100%;
-  width: 32px;
-  height: 32px;
 }
 
 .voiceMemberName {

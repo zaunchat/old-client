@@ -1,3 +1,4 @@
+import { Avatar } from "@mantine/core";
 import { h } from "preact";
 import styles from "../../../../styles/App/MainSidebar.module.css";
 import { CategoryIcon, CreateIcon } from "./Category";
@@ -50,10 +51,14 @@ export const Channels = ({ categories }: { categories: any }) => {
                     {channel.members.map((member: any) => (
                       <div className={styles.voiceMemberContainer}>
                         <div className={styles.voiceMember}>
-                          <img
+                          <Avatar
+                            size={"32px" as any}
+                            radius={"xl"}
                             className={styles.voiceMemberIcon}
                             src={member.icon}
-                          />
+                          >
+                            {member.name[0].toUpperCase()}
+                          </Avatar>
                           <div className={styles.voiceMemberName}>
                             {member.name}
                           </div>

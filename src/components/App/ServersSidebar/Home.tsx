@@ -1,8 +1,9 @@
+import { Avatar } from "@mantine/core";
 import { h } from "preact";
 import styles from "../../../styles/App/ServersSidebar.module.css";
 export const Home = ({ active }: { active: boolean }) => {
   return (
-    <div className={styles.icon}>
+    <Avatar className={styles.icon}>
       <svg
         width="55"
         height="55"
@@ -15,6 +16,6 @@ export const Home = ({ active }: { active: boolean }) => {
           fill="#FC4754"
         />
       </svg>
-    </div>
+    </Avatar>
   );
 };
