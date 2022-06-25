@@ -1,0 +1,12 @@
+.userIcon {
+    position: relative;
+    width: 56px;
+}
+.statusIcon {
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    position: absolute;
+    right: 4px;
+    bottom: 0px;
+}
