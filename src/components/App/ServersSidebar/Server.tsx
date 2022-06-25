@@ -27,7 +27,7 @@ export const Server = ({
         arrowSize={5}
         withArrow
         transition="slide-left"
-        transitionDuration={400}
+        transitionDuration={200}
       >
         <span style={{ fontWeight: "bold" }}>{name}</span>
       </Tooltip>
