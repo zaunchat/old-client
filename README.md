@@ -7,7 +7,7 @@
     - soon
   - [ ] App page
     - [x] Servers side bar
-    - [ ] Server (channels) side bar
+    - [X] Server (channels) side bar
       - [x] Top bar components
       - [x] Channels components
       - [x] User bar
@@ -15,7 +15,7 @@
       - [X] Top bar
       - [ ] message components
       - [ ] chat box
-    - [ ] Members side bar
+    - [X] Members side bar
   - [X] Error page
 
 ## 🏃‍♀️ Run Locally
