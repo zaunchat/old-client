@@ -3,7 +3,7 @@ import { RoutesComponent } from "./Routes";
 import { MantineProvider } from "@mantine/core";
 const App: FunctionalComponent = () => {
   return (
-    <MantineProvider theme={{ colorScheme: "dark" }}>
+    <MantineProvider theme={{ colorScheme: "dark", fontFamily: "Poppins" }}>
       <RoutesComponent />
     </MantineProvider>
   );
