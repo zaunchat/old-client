@@ -14,7 +14,7 @@
     - [ ] Playgroud 
       - [X] Top bar
       - [ ] message components
-      - [ ] chat box
+      - [X] chat box
     - [X] Members side bar
   - [X] Error page
 
