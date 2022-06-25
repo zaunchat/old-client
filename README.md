@@ -1,6 +1,6 @@
 ## 🗺 Roadmap
 
-- TODO: add api for the roadmap
+- TODO: add api to the roadmap
 - [x] Using **Vite** for builds and development
 - [ ] Pages
   - [ ] Landing page
