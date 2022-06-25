@@ -221,7 +221,7 @@
   color: rgba(255, 255, 255, 0.29);
 }
 .user {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   height: 100px;
   width: 100%;
