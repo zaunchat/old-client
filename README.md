@@ -11,7 +11,7 @@
       - [ ] Server (channels) side bar
         - [X] Top bar components
         - [X] Channels components
-        - [ ] User bar
+        - [X] User bar
       - [ ] Playgroud (chat)
         - [ ] Top bar
         - [ ] message components
