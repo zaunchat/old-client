@@ -220,3 +220,52 @@
 
   color: rgba(255, 255, 255, 0.29);
 }
+.user {
+  position: absolute;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: #121219;
+
+}
+.userIconContainer {
+  position: absolute;
+  left: 21px;
+}
+.textContainer {
+  position: absolute;
+  left: 87px;
+  height: 57px;
+  width: 100%;
+}
+.username {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+
+  color: #ffffff;
+  height: 36px;
+}
+
+.status {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+
+  color: rgba(255, 255, 255, 0.5);
+  height: 27px;
+}
