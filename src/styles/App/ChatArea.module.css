@@ -1,0 +1,66 @@
+.chatArea {
+  width: calc(100% - 345px - 95px - 345px);
+  height: calc(100% - 95px);
+  position: fixed;
+  top: 95px;
+  left: calc(345px + 95px);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.chatInputContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.leftIcon {
+  height: 83px;
+  width: 79px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.chatInput {
+  display: flex;
+  background: rgba(36, 36, 49, 0.4);
+  width: calc(100% - 70px) !important;
+  position: absolute;
+  bottom: 22px;
+  border-radius: 10px;
+}
+.textArea {
+  resize: none;
+  outline: none;
+  border: none;
+  padding-top: 21px;
+  padding-bottom: 21px;
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 45px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  background: rgba(36, 36, 49, 0);
+  color: rgba(255, 255, 255, 0.18);
+  width: calc(100% - 70px - 79px - 208px) !important;
+}
+
+.rightIcons {
+  width: 208px;
+  height: 85px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  right: 0;
+}
+.leftIcon,
+.rightIcons svg {
+  cursor: pointer;
+}
