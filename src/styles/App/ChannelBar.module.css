@@ -48,3 +48,17 @@
     
     color: #FFFFFF;
 }
+.settings {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 370px;
+}
+.searchInput {
+    position: absolute;
+    width: 317px;
+    right: 19px;
+    background-color: rgba(36, 36, 49, 0.4);;
+    border-radius: 15px;
+}
