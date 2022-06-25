@@ -11,12 +11,12 @@
       - [x] Top bar components
       - [x] Channels components
       - [x] User bar
-    - [ ] Playgroud (chat)
+    - [ ] Playgroud 
       - [X] Top bar
       - [ ] message components
       - [ ] chat box
     - [ ] Members side bar
-  - [ ] Error page
+  - [X] Error page
 
 ## 🏃‍♀️ Run Locally
 
