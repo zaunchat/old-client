@@ -13,7 +13,7 @@ export const User = ({
 }) => {
   return (
     <div className={styles.user}>
-      <div className={styles.userIconContainer}>
+      <div className={styles.userAvatar}>
         <UserIcon avatar={avatar} name={name} status={status} />
       </div>
       <div className={styles.textContainer}>

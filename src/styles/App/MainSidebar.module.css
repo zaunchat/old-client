@@ -226,17 +226,9 @@
   display: flex;
   align-items: center;
   background: #121219;
+}
 
-}
-.userIconContainer {
-  position: absolute;
-  left: 21px;
-  width: 345px;
-}
 .textContainer {
-  position: absolute;
-  left: 87px;
-  height: 57px;
 }
 .username {
   font-family: "Poppins";
@@ -248,6 +240,9 @@
   align-items: center;
   color: #ffffff;
   height: 36px;
+  position: absolute;
+  bottom: 42px;
+  left: 87px;
 }
 
 .status {
@@ -260,4 +255,13 @@
   align-items: center;
   color: rgba(255, 255, 255, 0.5);
   height: 27px;
+  position: absolute;
+  bottom: 21px;
+  left: 87px;
+}
+
+.userAvatar {
+  position: absolute;
+  left: 21px;
+  bottom: 23px;
 }
