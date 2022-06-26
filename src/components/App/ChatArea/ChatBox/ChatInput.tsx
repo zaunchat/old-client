@@ -10,7 +10,7 @@ import { useEffect, useState } from "preact/hooks";
 import { createStyles } from "@mantine/core";
 
 export const ChatInput = () => {
-  const [files, setFiles] = useState([{ title: "Background.png", id: "1" }]);
+  const [files, setFiles] = useState([{ title: "Avatar.png", id: "1" }]);
   const useStyles = createStyles((theme) => {
     return {
       test: {

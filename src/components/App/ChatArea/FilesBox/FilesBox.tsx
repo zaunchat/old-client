@@ -25,7 +25,7 @@ export const FilesBox = ({
             <div className={styles.file}>
               <div className={styles.attachmentContainer}>
                 <img
-                  src="https://media.discordapp.net/attachments/986814674173579335/990537806965248030/unknown.png?width=1272&height=682"
+                  src="https://cdn.discordapp.com/avatars/508449321176268801/7d9bd3f6f57b4d72ee105a93a984e098.png?size=1024"
                   className={styles.attachment}
                 />
               </div>
