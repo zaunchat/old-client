@@ -33,11 +33,17 @@ export const AppPage = () => {
 
   return (
     <div className={styles.app}>
-      <ServersSidebar />
-      <MainSidebar />
-      <ChannelBar name="welcome" />
-      <ChatArea />
-      <MembersSidebar roles={roles} />
+      <div className={styles.appLeft}>
+        <ServersSidebar />
+        <MainSidebar />
+      </div>
+      <div className={styles.appRight}>
+        <ChannelBar name="welcome" />
+        <div className={styles.appChat}>
+          <ChatArea />
+          <MembersSidebar roles={roles} />
+        </div>
+      </div>
     </div>
   );
 };
