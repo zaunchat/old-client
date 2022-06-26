@@ -1,10 +1,8 @@
 .membersSidebar {
-  position: fixed;
-  right: 0;
-  top: 95px;
   background: #121219;
   height: 100%;
-  width: 345px;
+  min-width: 345px;
+  max-width: 346px;
 }
 .membersSidebarContainer {
   width: 100%;
