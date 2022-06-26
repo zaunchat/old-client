@@ -9,6 +9,7 @@
 }
 .chatInputContainer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -22,13 +23,22 @@
   align-items: center;
   justify-content: center;
 }
+.chatInputBox {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  bottom: 22px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+
 .chatInput {
   display: flex;
   background: rgba(36, 36, 49, 0.4);
   width: calc(100% - 70px) !important;
-  position: absolute;
-  bottom: 22px;
-  border-radius: 10px;
 }
 .textArea {
   resize: none;
@@ -63,4 +73,84 @@
 .leftIcon,
 .rightIcons svg {
   cursor: pointer;
+}
+
+.filesBoxContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 300px;
+}
+.filesBox {
+  height: 300px;
+  width: calc(100% - 70px);
+  height: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: rgba(36, 36, 49, 0.4);
+  border-bottom: 1px solid #242431;
+  display: flex;
+  align-items: center;
+}
+.fileContainer {
+  margin-left: 25px;
+  width: 230px;
+  height: 250px;
+  background: rgba(0, 0, 0, 0.21);
+  border-radius: 5px;
+}
+.file {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.attachmentContainer {
+  width: 100%;
+  height: 230px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.attachment {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 10px;
+}
+.fileTitle {
+  width: 100%;
+  height: 20px;
+  position: absolute;
+  left: 10px;
+  bottom: 7px;
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+
+  color: rgba(255, 255, 255, 0.8);
+}
+.fileDelete {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: #121219;
+  border-radius: 10px;
+  top: -15px;
+  right: -15px;
+  display: none;
+}
+.fileContainer:hover .fileDelete {
+  display: flex;
 }
