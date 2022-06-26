@@ -15,6 +15,7 @@
       - [X] Top bar
       - [ ] message components
       - [X] chat box
+      - [X] files box
     - [X] Members side bar
   - [X] Error page
 
