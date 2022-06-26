@@ -13,7 +13,7 @@ export const ChatInput = () => {
   const [files, setFiles] = useState([{ title: "Avatar.png", id: "1" }]);
   const useStyles = createStyles((theme) => {
     return {
-      test: {
+      inputRadius: {
         borderRadius: files.length > 0 ? "0 0 10px 10px" : "10px",
       },
     };
@@ -32,7 +32,7 @@ export const ChatInput = () => {
     <div className={styles.chatInputContainer}>
       <div className={styles.chatInputBox}>
         <FilesBox files={files} setFiles={setFiles} />
-        <div className={`${classes.test} ${styles.chatInput}`}>
+        <div className={`${classes.inputRadius} ${styles.chatInput}`}>
           <div className={styles.leftIcon}>
             <AddIcon />
           </div>
