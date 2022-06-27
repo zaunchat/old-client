@@ -7,19 +7,25 @@ export const ChannelBar = ({ name }: { name: string }) => {
   return (
     <div className={styles.channelBar}>
       <div className={styles.channelBarContainer}>
-        <div className={styles.hash}>#</div>
-        <div className={styles.divider} />
-        <div className={styles.name}>{name}</div>
-        <div className={styles.settings}>
-          <Settings size={32} color={"rgba(255, 255, 255, 0.5)"} />
+        <div className={styles.barLeft}>
+          <div className={styles.hash}>#</div>
+          <div className={styles.divider} />
+          <div className={styles.name}>{name}</div>
         </div>
-        <Input
-          className={styles.searchInput}
-          size="lg"
-          variant="unstyled"
-          icon={<Search size={22} />}
-          placeholder="Search"
-        />
+
+        <div className={styles.barRight}>
+          <div className={styles.settings}>
+            <Settings size={32} color={"rgba(255, 255, 255, 0.5)"} />
+          </div>
+          <Input
+              className={styles.searchInput}
+              size="lg"
+              variant="unstyled"
+              icon={<Search size={22} />}
+              placeholder="Search"
+          />
+        </div>
+
       </div>
     </div>
   );

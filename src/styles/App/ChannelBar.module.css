@@ -1,18 +1,35 @@
 .channelBar {
-  position: fixed;
+  /*position: fixed;*/
   right: 0;
-  width: calc(100% - (345px + 95px));
+  width: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   height: 95px;
+    padding: 22px 0;
 }
 .channelBarContainer {
     display: flex;
     height: 100%;
     width: 100%;
     align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
 }
+
+.barLeft{
+    padding: 0 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.barRight{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
 .hash {
-    position: absolute;
+    /*position: absolute;*/
     left: 25px;
     font-family: 'Roboto';
     font-style: normal;
@@ -26,15 +43,16 @@
     color: rgba(255, 255, 255, 0.5);
 }
 .divider {
-    position: absolute;
+    /*position: absolute;*/
     left: 75px;
     width: 3px;
     height: 23px;
-
+    margin-right: 35px;
+    margin-left: 25px;
     background: rgba(217, 217, 217, 0.3);
 }
 .name {
-    position: absolute;
+    /*position: absolute;*/
     left: 113px;
     font-family: 'Poppins';
     font-style: normal;
@@ -52,13 +70,15 @@
     cursor: pointer;
     display: flex;
     align-items: center;
-    position: absolute;
-    right: 370px;
+    margin-right: 35px;
+    /*position: absolute;*/
+    /*right: 370px;*/
 }
 .searchInput {
-    position: absolute;
+    /*position: absolute;*/
     width: 317px;
-    right: 19px;
+    /*right: 19px;*/
     background-color: rgba(36, 36, 49, 0.4);;
     border-radius: 15px;
+    margin-right: 20px;
 }
