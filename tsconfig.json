@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "jsx": "react",
+    "jsxFactory": "h",
+    "jsxFragmentFactory": "Fragment",
+    "noEmit": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "baseUrl": "./",
+    "paths": {
+      "react": ["./node_modules/preact/compat"],
+      "react-dom": ["./node_modules/preact/compat"]
+    },
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*"]
+}
