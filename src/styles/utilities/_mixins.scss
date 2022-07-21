@@ -2,3 +2,10 @@
   width: 240px;
   height: 100%;
 }
+
+@mixin servers_sidebar_icon {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
