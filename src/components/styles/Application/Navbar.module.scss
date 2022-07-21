@@ -1,0 +1,21 @@
+.server_navbar {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.server_navbar > .title {
+  cursor: pointer;
+  color: white;
+  margin-left: 12px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+}
+.application_navbar {
+  background-color: red;
+}
+
+.members_navbar {
+  background-color: red;
+}
