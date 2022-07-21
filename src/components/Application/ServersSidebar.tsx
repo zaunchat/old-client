@@ -1,6 +1,6 @@
 import { h } from "preact";
 
-import styles from "../styles/Application/Servers.module.scss";
+import styles from "../styles/Application/ServersSidebar.module.scss";
 
 // TODO: transform it to real svg not png...
 function Home() {
@@ -51,7 +51,7 @@ function Divider() {
   return <div class={styles.divider}></div>;
 }
 
-export function Servers() {
+export function ServersSidebar() {
   return (
     <div class={styles.container}>
       <Home />
