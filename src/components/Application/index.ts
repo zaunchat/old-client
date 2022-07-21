@@ -1,1 +1,1 @@
-export * from './Servers'
+export * from './ServersSidebar'
