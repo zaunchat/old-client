@@ -1,9 +1,13 @@
 import { h } from "preact";
+import { useEffect } from "preact/hooks";
 import { ServerSidebar, ServersSidebar } from "../../components/Application";
 
 import styles from "./styles/Application.module.scss";
 
 export function Application() {
+  useEffect(() => {
+    console.log(localStorage.getItem('token'))
+  }, [])
   return (
     <div class={styles.container}>
       <div class={styles.navbar}>
