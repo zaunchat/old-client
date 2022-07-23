@@ -24,6 +24,7 @@ function User() {
 
 export function ServerSidebar() {
   const [voice, setVoice] = useState(true);
+  const [voiceUsers, setVoiceUsers] = useState(["Mr.Kasper","Mr.Kasper","Mr.Kasper","Mr.Kasper","Mr.Kasper","Mr.Kasper","Mr.Kasper","Mr.Kasper",]);
   return (
     <div class={styles.container}>
       <div class={styles.up_container}>
@@ -35,7 +36,11 @@ export function ServerSidebar() {
             <div class={styles.channel}>
               <div class={styles.container}>
                 <div class={styles.details}></div>
-                <div class={styles.members}></div>
+                <div class={styles.members}>
+                  {voiceUsers.map((user, i) => (
+                    <img style={{"position": "relative", left: `${-8 * i}px`}} src="https://images-ext-2.discordapp.net/external/IHYqSv1JWvKfRoo6etajisbHqZXS2ortFa70RqNZT04/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/508449321176268801/4c4ac0cf1b75991c6a61059a72cf4c2c.png" alt="" />
+                  ))}
+                </div>
                 <div></div>
               </div>
             </div>

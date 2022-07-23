@@ -68,21 +68,28 @@
     background-color: #15151c;
 
     & > .container {
-      background-color: red;
       width: 100%;
       display: grid;
       gap: 8px;
       & > * {
-        width: calc(100%);
+        width: calc(100% - 20px);
+        margin-inline: 10px;
       }
       & > .details {
         margin-top: 8px;
-        background-color: green;
         height: 29px;
       }
       & > .members {
         height: 24px;
-        background-color: blue;
+        & > * {
+          height: 24px;
+          width: 24px;
+          border-radius: 100%;
+        }
+        & > *:not(:first-child) {
+          padding-left: 1.71px;
+          background-color: #15151c;
+        }
       }
     }
   }
