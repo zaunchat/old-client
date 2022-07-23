@@ -5,6 +5,9 @@ declare const classNames: {
   readonly name: "name";
   readonly username: "username";
   readonly status: "status";
+  readonly up_container: "up_container";
+  readonly down_container: "down_container";
+  readonly container: "container";
 };
 export default classNames;
 export type ClassNames =
@@ -13,4 +16,7 @@ export type ClassNames =
   | "avatar"
   | "name"
   | "username"
-  | "status";
+  | "status"
+  | "up_container"
+  | "down_container"
+  | "container";
