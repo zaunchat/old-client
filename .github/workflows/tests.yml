@@ -3,7 +3,7 @@ on:
   - pull_request
 
 jobs:
-  cache-and-install:
+  cache-install:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -20,5 +20,16 @@ jobs:
           run_install: false
       - name: Install dependencies
         run: pnpm install
-      - name: Test
-        run: pnpm run test
+  run-tests:
+    runs-on: ubuntu-latest
+      - steps:
+        - name: Test
+        - run: pnpm run test
+workflows:
+  version: 2
+  build-test:
+    jobs:
+      - cache-install
+      - test:
+          requires:
+            - install
