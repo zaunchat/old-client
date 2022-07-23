@@ -21,7 +21,6 @@
   width: 32px;
   border-radius: 100%;
 }
-
 .name {
   width: 100%;
   height: 100%;
@@ -57,4 +56,20 @@
   flex-direction: column;
   width: 100%;
   height: 100%;
+}
+.voice {
+  width: 100%;
+  background-color: red;
+
+  & > .status {
+    background-color: rgba(85, 255, 102, 0.8);
+    height: 21px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 9px;
+    line-height: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }

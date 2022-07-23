@@ -8,6 +8,7 @@ declare const classNames: {
   readonly up_container: "up_container";
   readonly down_container: "down_container";
   readonly container: "container";
+  readonly voice: "voice";
 };
 export default classNames;
 export type ClassNames =
@@ -19,4 +20,5 @@ export type ClassNames =
   | "status"
   | "up_container"
   | "down_container"
-  | "container";
+  | "container"
+  | "voice";

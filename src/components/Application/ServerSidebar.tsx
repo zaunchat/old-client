@@ -1,4 +1,5 @@
 import { h } from "preact";
+import { useState } from "preact/hooks";
 
 import styles from "../styles/Application/ServerSidebar.module.scss";
 
@@ -22,11 +23,19 @@ function User() {
 }
 
 export function ServerSidebar() {
+  const [voice, setVoice] = useState(true);
   return (
     <div class={styles.container}>
       <div class={styles.up_container}>
+        
       </div>
       <div class={styles.down_container}>
+      {voice ? (
+          <div class={styles.voice}>
+       
+            <div class={styles.status}>VOICE CONNECTED</div>
+          </div>
+        ) : ""}
         <User />
       </div>
     </div>
