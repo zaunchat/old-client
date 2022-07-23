@@ -28,4 +28,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Test
-      - run: pnpm run test
+        run: pnpm run test
