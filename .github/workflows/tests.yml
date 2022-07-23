@@ -3,7 +3,7 @@ on:
   - pull_request
 
 jobs:
-  cache-and-install:
+  install-tests:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
