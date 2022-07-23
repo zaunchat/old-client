@@ -32,7 +32,13 @@ export function ServerSidebar() {
       <div class={styles.down_container}>
       {voice ? (
           <div class={styles.voice}>
-       
+            <div class={styles.channel}>
+              <div class={styles.container}>
+                <div class={styles.details}></div>
+                <div class={styles.members}></div>
+                <div></div>
+              </div>
+            </div>
             <div class={styles.status}>VOICE CONNECTED</div>
           </div>
         ) : ""}
