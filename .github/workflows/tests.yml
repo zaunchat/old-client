@@ -12,13 +12,13 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
-      - uses: npm/action-setup@v2.0.1
-        name: Install npm
-        id: npm-install
+      - uses: pnpm/action-setup@v2.0.1
+        name: Install pnpm
+        id: pnpm-install
         with:
           version: 7
           run_install: false
       - name: Install dependencies
-        run: npm install
+        run: pnpm install
       - name: Test
-        run: npm run test
+        run: pnpm run test
