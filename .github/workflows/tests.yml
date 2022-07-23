@@ -20,11 +20,12 @@ jobs:
           run_install: false
       - name: Install dependencies
         run: pnpm install
-  run-tests:
+  tests:
     runs-on: ubuntu-latest
-    - steps:
+    steps:
       - name: Test
       - run: pnpm run test
+
 workflows:
   version: 2
   build-test:
