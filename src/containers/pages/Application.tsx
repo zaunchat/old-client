@@ -1,5 +1,5 @@
 import { h } from "preact";
-import { ServerSidebar, ServersSidebar, ServerNavbar, ApplicationNavbar, MembersNavbar } from "../../components/Application";
+import { ServerSidebar, ServersSidebar, ServerNavbar, ApplicationNavbar, MembersNavbar, MembersSidebar } from "../../components/Application";
 
 import styles from "./styles/Application.module.scss";
 
@@ -14,7 +14,7 @@ export function Application() {
       <div class={styles.servers_sidebar}><ServersSidebar /></div>
       <div class={styles.server_sidebar}><ServerSidebar /></div>
       <div class={styles.application}></div>
-      <div class={styles.members_sidebar}></div>
+      <div class={styles.members_sidebar}><MembersSidebar /></div>
     </div>
   );
 }
