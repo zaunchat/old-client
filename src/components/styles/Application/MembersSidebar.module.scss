@@ -3,6 +3,10 @@
   flex-direction: column;
   width: 100%;
   height: 100%;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 .category:first-child {
   margin-top: 20px;
