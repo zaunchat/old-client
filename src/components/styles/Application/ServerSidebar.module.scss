@@ -91,7 +91,19 @@
           border-left: 1.71px #15151c solid;
           background-color: #15151c;
         }
+        & > div:last-child {
+          background-color: white;
+          color: black;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 9px;
+          line-height: 12px;
+          
 
+        }
       }
     }
   }
