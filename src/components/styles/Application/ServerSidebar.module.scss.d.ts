@@ -11,6 +11,10 @@ declare const classNames: {
   readonly voice: "voice";
   readonly channel: "channel";
   readonly details: "details";
+  readonly timer: "timer";
+  readonly title: "title";
+  readonly span_server: "span_server";
+  readonly span_channel: "span_channel";
   readonly members: "members";
 };
 export default classNames;
@@ -27,4 +31,8 @@ export type ClassNames =
   | "voice"
   | "channel"
   | "details"
+  | "timer"
+  | "title"
+  | "span_server"
+  | "span_channel"
   | "members";

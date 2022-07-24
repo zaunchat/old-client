@@ -78,6 +78,32 @@
       & > .details {
         margin-top: 8px;
         height: 29px;
+        & > .timer {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 9px;
+          line-height: 14px;
+          color: rgba(209, 209, 211, 0.9);
+        }
+        & > .title {
+          display: flex;
+          align-items: center;
+          & > svg {
+            margin-right: 5px;
+          }
+          & > span {
+            font-size: 10px;
+            line-height: 15px;
+          }
+          & > .span_server {
+            font-weight: 700;
+            color: rgba(209, 209, 211, 0.9);
+          }
+          & > .span_channel {
+            font-weight: 600;
+            color: rgba(209, 209, 211, 0.6);
+          }
+        }
       }
       & > .members {
         height: 24px;
