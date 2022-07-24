@@ -21,7 +21,6 @@
   width: 32px;
   border-radius: 100%;
 }
-
 .name {
   width: 100%;
   height: 100%;
@@ -57,4 +56,96 @@
   flex-direction: column;
   width: 100%;
   height: 100%;
+}
+.voice {
+  width: 100%;
+  background-color: red;
+  & > * {
+    width: 100%;
+  }
+  & > .channel {
+    height: 77px;
+    background-color: #15151c;
+
+    & > .container {
+      width: 100%;
+      display: grid;
+      gap: 8px;
+      position: relative;
+      & > .bgBlob {
+        position:absolute;
+        left: 0;
+        top: 20px;
+      }
+      & > * {
+        width: calc(100% - 20px);
+        margin-inline: 10px;
+      }
+      & > .details {
+        margin-top: 8px;
+        height: 29px;
+        & > .timer {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 9px;
+          line-height: 14px;
+          color: rgba(209, 209, 211, 0.9);
+        }
+        & > .title {
+          display: flex;
+          align-items: center;
+          & > svg {
+            margin-right: 5px;
+          }
+          & > span {
+            font-size: 10px;
+            line-height: 15px;
+          }
+          & > .span_server {
+            font-weight: 700;
+            color: rgba(209, 209, 211, 0.9);
+          }
+          & > .span_channel {
+            font-weight: 600;
+            color: rgba(209, 209, 211, 0.6);
+          }
+        }
+      }
+      & > .members {
+        height: 24px;
+        display: flex;
+        & > * {
+          height: 24px;
+          width: 24px;
+          border-radius: 100%;
+        }
+        & > *:not(:first-child) {
+          border-left: 1.71px #15151c solid;
+          background-color: #15151c;
+        }
+        & > div:last-child {
+          background-color: white;
+          color: black;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 9px;
+          line-height: 12px;
+        }
+      }
+    }
+  }
+  & > .status {
+    background-color: rgba(85, 255, 102, 0.8);
+    height: 21px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 9px;
+    line-height: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
