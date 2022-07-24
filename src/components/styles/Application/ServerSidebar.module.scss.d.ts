@@ -10,6 +10,7 @@ declare const classNames: {
   readonly container: "container";
   readonly voice: "voice";
   readonly channel: "channel";
+  readonly bgBlob: "bgBlob";
   readonly details: "details";
   readonly timer: "timer";
   readonly title: "title";
@@ -30,6 +31,7 @@ export type ClassNames =
   | "container"
   | "voice"
   | "channel"
+  | "bgBlob"
   | "details"
   | "timer"
   | "title"

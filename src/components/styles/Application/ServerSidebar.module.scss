@@ -71,6 +71,12 @@
       width: 100%;
       display: grid;
       gap: 8px;
+      position: relative;
+      & > .bgBlob {
+        position:absolute;
+        left: 0;
+        top: 20px;
+      }
       & > * {
         width: calc(100% - 20px);
         margin-inline: 10px;
