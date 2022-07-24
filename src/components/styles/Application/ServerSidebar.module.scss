@@ -81,15 +81,17 @@
       }
       & > .members {
         height: 24px;
+        display: flex;
         & > * {
           height: 24px;
           width: 24px;
           border-radius: 100%;
         }
         & > *:not(:first-child) {
-          padding-left: 1.71px;
+          border-left: 1.71px #15151c solid;
           background-color: #15151c;
         }
+
       }
     }
   }
