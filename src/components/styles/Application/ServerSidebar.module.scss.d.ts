@@ -15,6 +15,7 @@ declare const classNames: {
   readonly details: "details";
   readonly timer: "timer";
   readonly title: "title";
+  readonly button: "button";
   readonly head: "head";
   readonly span_server: "span_server";
   readonly span_channel: "span_channel";
@@ -38,6 +39,7 @@ export type ClassNames =
   | "details"
   | "timer"
   | "title"
+  | "button"
   | "head"
   | "span_server"
   | "span_channel"
