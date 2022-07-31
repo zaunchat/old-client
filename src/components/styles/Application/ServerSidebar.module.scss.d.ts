@@ -8,12 +8,14 @@ declare const classNames: {
   readonly up_container: "up_container";
   readonly down_container: "down_container";
   readonly container: "container";
+  readonly statusbar: "statusbar";
   readonly voice: "voice";
   readonly channel: "channel";
   readonly bgBlob: "bgBlob";
   readonly details: "details";
   readonly timer: "timer";
   readonly title: "title";
+  readonly head: "head";
   readonly span_server: "span_server";
   readonly span_channel: "span_channel";
   readonly members: "members";
@@ -29,12 +31,14 @@ export type ClassNames =
   | "up_container"
   | "down_container"
   | "container"
+  | "statusbar"
   | "voice"
   | "channel"
   | "bgBlob"
   | "details"
   | "timer"
   | "title"
+  | "head"
   | "span_server"
   | "span_channel"
   | "members";

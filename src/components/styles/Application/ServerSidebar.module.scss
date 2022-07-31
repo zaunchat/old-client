@@ -57,6 +57,12 @@
   width: 100%;
   height: 100%;
 }
+.statusbar {
+  min-width: 11px;
+  min-height: 11px;
+  height: 11px;
+  height: 11px;
+}
 .voice {
   width: 100%;
   background-color: red;
@@ -94,21 +100,27 @@
         & > .title {
           display: flex;
           align-items: center;
+          & > .head {
+            width: 100%;
+            height: 100%;
+            & > span {
+              font-size: 10px;
+              line-height: 15px;
+            }
+            & > .span_server {
+              max-width: 200px;
+              font-weight: 700;
+              color: rgba(209, 209, 211, 0.9);
+            }
+            & > .span_channel {
+              font-weight: 600;
+              color: rgba(209, 209, 211, 0.6);
+            }
+          }
           & > svg {
             margin-right: 5px;
           }
-          & > span {
-            font-size: 10px;
-            line-height: 15px;
-          }
-          & > .span_server {
-            font-weight: 700;
-            color: rgba(209, 209, 211, 0.9);
-          }
-          & > .span_channel {
-            font-weight: 600;
-            color: rgba(209, 209, 211, 0.6);
-          }
+      
         }
       }
       & > .members {
@@ -124,6 +136,8 @@
           background-color: #15151c;
         }
         & > div:last-child {
+          height: 24px;
+          width: 24px;
           background-color: white;
           color: black;
           display: flex;
