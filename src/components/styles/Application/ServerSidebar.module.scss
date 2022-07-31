@@ -61,6 +61,12 @@
         color: #ffffff;
       }
     }
+    .buttons {
+       display: flex;
+       align-items: center;
+       gap: 6px;
+       margin-right: 10px;
+    }
   }
 }
 .voice {

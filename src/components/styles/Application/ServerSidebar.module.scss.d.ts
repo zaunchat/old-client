@@ -9,6 +9,7 @@ declare const classNames: {
   readonly name: "name";
   readonly status: "status";
   readonly username: "username";
+  readonly buttons: "buttons";
   readonly voice: "voice";
   readonly channel: "channel";
   readonly bgBlob: "bgBlob";
@@ -33,6 +34,7 @@ export type ClassNames =
   | "name"
   | "status"
   | "username"
+  | "buttons"
   | "voice"
   | "channel"
   | "bgBlob"
