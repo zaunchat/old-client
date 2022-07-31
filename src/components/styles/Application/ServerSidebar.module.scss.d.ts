@@ -1,14 +1,14 @@
 declare const classNames: {
-  readonly user: "user";
-  readonly user_container: "user_container";
-  readonly avatar: "avatar";
-  readonly name: "name";
-  readonly username: "username";
-  readonly status: "status";
   readonly up_container: "up_container";
   readonly down_container: "down_container";
   readonly container: "container";
   readonly statusbar: "statusbar";
+  readonly user: "user";
+  readonly user_container: "user_container";
+  readonly avatar: "avatar";
+  readonly name: "name";
+  readonly status: "status";
+  readonly username: "username";
   readonly voice: "voice";
   readonly channel: "channel";
   readonly bgBlob: "bgBlob";
@@ -23,16 +23,16 @@ declare const classNames: {
 };
 export default classNames;
 export type ClassNames =
-  | "user"
-  | "user_container"
-  | "avatar"
-  | "name"
-  | "username"
-  | "status"
   | "up_container"
   | "down_container"
   | "container"
   | "statusbar"
+  | "user"
+  | "user_container"
+  | "avatar"
+  | "name"
+  | "status"
+  | "username"
   | "voice"
   | "channel"
   | "bgBlob"
