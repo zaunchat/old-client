@@ -1,3 +1,4 @@
+import { Fragment } from "preact";
 import { h } from "preact";
 import { useEffect, useState } from "preact/hooks";
 
@@ -5,6 +6,19 @@ import styles from "../styles/Application/ServerSidebar.module.scss";
 import { SdButton } from "./utils";
 let max = 7;
 let left = 4;
+
+interface IChannelResolve {
+  name: string;
+  id: string;
+  category: {
+    id: string;
+    name: string;
+  };
+}
+
+type IChannel<S extends boolean = false> = S extends true
+  ? Omit<IChannel, 'category'> & Partial<Pick<IChannel, 'category'>>
+  : IChannelResolve;
 
 function BgBlob() {
   return (
@@ -380,12 +394,74 @@ function User() {
   );
 }
 
+function Channel({ channel }: { channel: IChannel<true> }) {
+  return <div class={`${styles.channel}`}>
+    {/* TODO: add coustom icon */}
+    <div class={styles.icon}>#</div>
+    <div class={styles.name}>{channel.name}</div>
+  </div>;
+}
+
+function Channels({ channels }: { channels: IChannel[] | IChannel<true>[] }) {
+    return  (
+      <Fragment>
+        {channels.map((channel) => {
+        return (
+          <Channel channel={channel} />
+        )
+      })}
+      </Fragment>
+    )
+}
+
+function Category({ channels, name }: { channels: IChannel<true>[], name: string }) {
+  return <div class={styles.category}>
+    <div class={styles.title}>{name}</div>
+    <Channels channels={channels} />
+  </div>;
+}
+
+function reduceChannels(acc: any, channel: IChannel) {
+  if (channel.category?.id) {
+    if (!acc[channel.category.id]) {
+      acc[channel.category.id] = {name: channel.category.name, channels: []};
+    }
+    acc[channel.category.id].channels.push(channel);
+  } else {
+    if (!acc["default"]) {
+      acc["default"] = {name: "default", channels: []};
+    }
+    acc.default.channels.push(channel);
+  }
+  return acc;
+}
+
+function ChannelsAdapter({ channels }: { channels: IChannel[] }) {
+  const categories = channels.reduce(reduceChannels, {});
+  console.log(categories)
+  return (
+    <div class={styles.container}>
+      {Object.keys(categories).map((id) => {
+        const category_channels = categories[id];
+        return id !== "default" && <Category name={category_channels.name} channels={category_channels.channels} />;
+      })}
+    </div>
+  );
+}
+
 export function ServerSidebar() {
   const [voice, setVoice] = useState(true);
   const [voiceUsers, setVoiceUsers] = useState(Array(max + 10).fill(0));
   return (
     <div class={styles.container}>
-      <div class={styles.up_container}></div>
+      <div class={styles.up_container}>
+        <ChannelsAdapter
+          channels={[
+            ...Array(10).fill({ name: "test3123", category: { id: "test", "name": "WELCOME" } }),
+            ...Array(10).fill({ name: "test1232", category: null }),
+          ]}
+        />
+      </div>
       <div class={styles.down_container}>
         {voice ? (
           <div class={styles.voice}>
