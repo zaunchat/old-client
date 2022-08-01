@@ -4,8 +4,14 @@ declare const classNames: {
   readonly category: "category";
   readonly title: "title";
   readonly active: "active";
-  readonly channel: "channel";
+  readonly branches: "branches";
+  readonly branch: "branch";
   readonly icon: "icon";
+  readonly continue: "continue";
+  readonly middle: "middle";
+  readonly first: "first";
+  readonly last: "last";
+  readonly channel: "channel";
   readonly name: "name";
   readonly down_container: "down_container";
   readonly statusbar: "statusbar";
@@ -32,8 +38,14 @@ export type ClassNames =
   | "category"
   | "title"
   | "active"
-  | "channel"
+  | "branches"
+  | "branch"
   | "icon"
+  | "continue"
+  | "middle"
+  | "first"
+  | "last"
+  | "channel"
   | "name"
   | "down_container"
   | "statusbar"

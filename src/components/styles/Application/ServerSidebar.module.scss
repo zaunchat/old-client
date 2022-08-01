@@ -16,6 +16,73 @@
       & > .active {
         background: rgba(255, 255, 255, 0.1);
       }
+      & > .branches {
+        & > .branch {
+          height: 42px;
+          width: 100%;
+          display: flex;
+          & > .icon {
+            width: 37px;
+            height: 100%;
+            position: relative;
+            & > .continue {
+              width: 2px;
+              height: 15px;
+              background: #b0b0b0;
+              position: absolute;
+              left: 15px;
+              bottom: 0;
+            }
+            & > .middle {
+              width: 2px;
+              height: 100%;
+              background: #b0b0b0;
+              position: absolute;
+              left: 15px;
+            }
+            & > .first {
+              position: absolute;
+              left: 15px;
+              top: 15px;
+              & > div:first-child {
+                width: 2px;
+                height: 11px;
+                background: #b0b0b0;
+                border-radius: 10px 10px 0px 0px;
+              }
+              & > div:nth-child(2) {
+                width: 12px;
+                height: 2px;
+                background: #b0b0b0;
+                border-radius: 0px 10px 10px 0px;
+              }
+            }
+            & > .last {
+              position: absolute;
+              left: 15px;
+              & > div:first-child {
+                width: 2px;
+                height: 28px;
+                background: #b0b0b0;
+              }
+              & > div:nth-child(2) {
+                width: 12px;
+                height: 2px;
+                background: #b0b0b0;
+                border-radius: 0px 10px 10px 0px;
+              }
+            }
+          }
+          &:hover {
+            background: rgba(255, 255, 255, 0.1);
+          }
+          & > * {
+            font-style: normal;
+            font-weight: 600;
+            color: #b0b0b0;
+          }
+        }
+      }
       & > .channel {
         height: 42px;
         width: 100%;
