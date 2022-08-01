@@ -1,7 +1,11 @@
 declare const classNames: {
   readonly container: "container";
-  readonly category: "category";
+  readonly wrapper: "wrapper";
+  readonly invite: "invite";
+  readonly left_icon: "left_icon";
+  readonly right_icon: "right_icon";
   readonly title: "title";
+  readonly category: "category";
   readonly members: "members";
   readonly member: "member";
   readonly user: "user";
@@ -13,8 +17,12 @@ declare const classNames: {
 export default classNames;
 export type ClassNames =
   | "container"
-  | "category"
+  | "wrapper"
+  | "invite"
+  | "left_icon"
+  | "right_icon"
   | "title"
+  | "category"
   | "members"
   | "member"
   | "user"
