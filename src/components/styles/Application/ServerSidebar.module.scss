@@ -21,13 +21,17 @@
           height: 42px;
           width: 100%;
           display: flex;
+          & > .name {
+            display: flex;
+            align-items: center;
+          }
           & > .icon {
             width: 37px;
             height: 100%;
             position: relative;
             & > .continue {
               width: 2px;
-              height: 15px;
+              height: 17px;
               background: #b0b0b0;
               position: absolute;
               left: 15px;
@@ -43,7 +47,7 @@
             & > .first {
               position: absolute;
               left: 15px;
-              top: 15px;
+              top: 12px;
               & > div:first-child {
                 width: 2px;
                 height: 11px;
@@ -62,7 +66,7 @@
               left: 15px;
               & > div:first-child {
                 width: 2px;
-                height: 28px;
+                height: 21px;
                 background: #b0b0b0;
               }
               & > div:nth-child(2) {
