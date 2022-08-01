@@ -4,9 +4,7 @@
 
 ## ✨ Features
 
-- Light/dark mode toggle (working)
-- Road to support all local languages (idle)
-<!-- TODO: ADD MORE! -->
+<!-- TODO: ADD FEATURES! -->
 
 ## 🏃‍♀️ Run It Locally
 
