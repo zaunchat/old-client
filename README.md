@@ -34,5 +34,12 @@ then
 $ npm run dev
 ```
 
+## ✨ Contributors
+
+<a href="https://github.com/itchatapp/client/graphs/contributors">
+  <img alt="Grid of profile icons of the contributors" src="https://contrib.rocks/image?repo=itchatapp/client" />
+</a>
+
+
 ### 📝 License
 Refer to the [LICENSE](LICENSE) file.
