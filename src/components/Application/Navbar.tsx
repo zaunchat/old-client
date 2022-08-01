@@ -9,7 +9,11 @@ export function ServerNavbar() {
 }
 
 export function ApplicationNavbar() {
-  return <div class={styles.application_navbar}>test</div>;
+  return <div class={styles.application_navbar}>
+    <div class={styles.type_tag}>#</div>
+    <div class={styles.divider} />
+    <div class={styles.title}>What is your name!</div>
+  </div>;
 }
 
 export function MembersNavbar() {
