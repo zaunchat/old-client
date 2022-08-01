@@ -1,3 +1,4 @@
+import { Fragment } from "preact";
 import { h } from "preact";
 import { useEffect, useState } from "preact/hooks";
 
@@ -5,6 +6,25 @@ import styles from "../styles/Application/ServerSidebar.module.scss";
 import { SdButton } from "./utils";
 let max = 7;
 let left = 4;
+
+interface IBranch {
+  id: string;
+  name: string;
+}
+
+interface IChannelResolve {
+  name: string;
+  id: string;
+  category: {
+    id: string;
+    name: string;
+  };
+  branches: IBranch[] | [];
+}
+
+type IChannel<S extends boolean = false> = S extends true
+  ? Omit<IChannel, "category"> & Partial<Pick<IChannel, "category">>
+  : IChannelResolve;
 
 function BgBlob() {
   return (
@@ -380,12 +400,159 @@ function User() {
   );
 }
 
+type TBranchIcon = "1" | "2" | "3";
+
+function BranchIcon({ type, cont }: { type: TBranchIcon, cont: boolean }) {
+  return (
+    <div class={styles.icon}>
+      {type == "1" && (
+        <div class={styles.first}>
+          <div />
+          <div />
+        </div>
+      )}
+
+      {cont && type == "1" && (
+        <div class={styles.continue} />
+      )}
+
+      {type == "2" && (
+        <div class={styles.middle} />
+      )}
+
+      {type == "3" && (
+        <div class={styles.last}>
+          <div />
+          <div />
+        </div>
+      )}
+    </div>
+  );
+}
+
+function Branch({ branch, type, cont }: { branch: IBranch; type: TBranchIcon, cont: boolean }) {
+  return (
+    <div class={`${styles.branch}`}>
+      <BranchIcon type={type} cont={cont} />
+      <div class={styles.name}>what is your name</div>
+    </div>
+  );
+}
+
+function Branches({ branches }: { branches: IBranch[] }) {
+  return (
+    <div className={styles.branches}>
+      {branches.map((branch, i) => {
+        const type = branches.length - 1 === i ? "3" : i === 0 ? "1" : "2";
+        const cont = branches.length > 2
+        return <Branch branch={branch} type={type} cont={cont} />;
+      })}
+    </div>
+  );
+}
+
+function Channel({ channel }: { channel: IChannel<true> }) {
+  return (
+    <div class={`${styles.channel}`}>
+      {/* TODO: add coustom icon */}
+      <div class={styles.icon}>#</div>
+      <div class={styles.name}>{channel.name}</div>
+    </div>
+  );
+}
+
+function Channels({ channels }: { channels: IChannel[] | IChannel<true>[] }) {
+  return (
+    <Fragment>
+      {channels.map((channel) => {
+        return (
+          <Fragment>
+            <Channel channel={channel} />
+            <Branches branches={channel.branches} />
+          </Fragment>
+        );
+      })}
+    </Fragment>
+  );
+}
+
+function Category({
+  channels,
+  name,
+}: {
+  channels: IChannel<true>[];
+  name: string;
+}) {
+  return (
+    <div class={styles.category}>
+      <div class={styles.title}>{name}</div>
+      <Channels channels={channels} />
+    </div>
+  );
+}
+
+function reduceChannels(acc: any, channel: IChannel) {
+  if (channel.category?.id) {
+    if (!acc[channel.category.id]) {
+      acc[channel.category.id] = {
+        name: channel.category.name,
+        channels: [],
+        branches: [],
+      };
+    }
+    acc[channel.category.id].channels.push(channel);
+  } else {
+    if (!acc["default"]) {
+      acc["default"] = { name: "default", channels: [], branches: [] };
+    }
+    acc.default.channels.push(channel);
+  }
+  return acc;
+}
+
+function ChannelsAdapter({ channels }: { channels: IChannel[] }) {
+  const categories = channels.reduce(reduceChannels, {});
+  console.log(categories);
+  return (
+    <div class={styles.container}>
+      {Object.keys(categories).map((id) => {
+        const category_channels = categories[id];
+        return (
+          id !== "default" && (
+            <Category
+              name={category_channels.name}
+              channels={category_channels.channels}
+            />
+          )
+        );
+      })}
+    </div>
+  );
+}
+
 export function ServerSidebar() {
   const [voice, setVoice] = useState(true);
   const [voiceUsers, setVoiceUsers] = useState(Array(max + 10).fill(0));
   return (
     <div class={styles.container}>
-      <div class={styles.up_container}></div>
+      <div class={styles.up_container}>
+        <ChannelsAdapter
+          channels={[
+            ...Array(3).fill({
+              name: "test3123",
+              category: { id: "test", name: "WELCOME" },
+              branches: [
+                { name: "what is your name", id: "123" },
+                { name: "what is your name", id: "123" },
+                { name: "what is your name", id: "123" },
+                { name: "what is your name", id: "123" },
+                { name: "what is your name", id: "123" },
+              ],
+            }),
+            ...Array(3).fill({ name: "test1232", category: null }),
+          ]}
+        />
+      </div>
       <div class={styles.down_container}>
         {voice ? (
           <div class={styles.voice}>
