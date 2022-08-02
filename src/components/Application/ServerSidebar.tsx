@@ -208,11 +208,6 @@ export function ServerSidebar() {
               name: "test3123",
               category: { id: "test", name: "WELCOME" },
               branches: [
-                { name: "what is your name", id: "123" },
-                { name: "what is your name", id: "123" },
-                { name: "what is your name", id: "123" },
-                { name: "what is your name", id: "123" },
-                { name: "what is your name", id: "123" },
               ],
             }),
             ...Array(3).fill({ name: "test1232", category: null }),
