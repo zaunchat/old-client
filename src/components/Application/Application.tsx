@@ -114,6 +114,17 @@ export function App() {
               contents: ["test", "test2"],
             }}
           />
+          <Divider title={"Hello world"} />
+          <MultiMessage
+            message={{
+              author: {
+                avatar:
+                  "https://cdn.discordapp.com/avatars/508449321176268801/bc2e9d1dc008fe7153464a5b29362dc4.png?size=1024",
+                name: "Mr.Kasper",
+              },
+              contents: ["test", "test2"],
+            }}
+          />
         </div>
       </div>
       <div class={styles.box}>
