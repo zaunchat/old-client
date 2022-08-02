@@ -22,7 +22,8 @@
   "dependencies": {
     "preact": "^10.10.0",
     "preact-render-to-string": "^5.2.1",
-    "preact-router": "^3.2.1"
+    "preact-router": "^3.2.1",
+    "react-textarea-autosize": "^8.3.4"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.3.0",

@@ -1,0 +1,65 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  & > .area {
+    height: 100%;
+    width: 100%;
+    background: #212128;
+  }
+  & > .box {
+    background: #212128;
+    display: flex;
+    justify-content: center;
+    & > .container {
+      min-height: 35px;
+      width: calc(100% - 50px);
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      top: -9px;
+      background: #15151c;
+      border: 1px solid rgba(0, 0, 0, 0.3);
+      border-radius: 5px;
+      & > .textarea {
+        color: white;
+        &::placeholder {
+            color: #CBCBCB;
+        }
+        min-height: 100%;
+        background-color: transparent;
+        width: 100%;
+        position: relative;
+        left: 0px;
+        resize: none;
+        outline: none;
+        border: none;
+        display: flex;
+        align-items: center;
+        font-family: "Rubik";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 35px;
+        padding-left: 15px;
+      }
+      & > .icons {
+        display: flex;
+        align-items: center;
+        margin-right: 5px;
+        gap: 10px;
+      }
+    }
+  }
+}
+.sendIcon {
+  width: 25px;
+  height: 25px;
+  background: #15151c;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
