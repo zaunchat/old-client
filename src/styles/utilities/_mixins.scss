@@ -4,6 +4,7 @@
 }
 
 @mixin servers_sidebar_icon {
+  cursor: pointer;
   width: 100%;
   display: flex;
   justify-content: center;
