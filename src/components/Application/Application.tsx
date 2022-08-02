@@ -5,6 +5,7 @@ import ReactTextareaAutosize from "react-textarea-autosize";
 import styles from "../styles/Application/Application.module.scss";
 import { EmojiIcon, SendIcon, ShareFilesIcon } from "./assets";
 import { DogWelcomerVector, PartyWelcomeVecotr, WelcomeBlob } from "./assets/Welcomer";
+import { Divider } from "./utils";
 
 
 
@@ -31,6 +32,7 @@ export function App() {
       <div class={styles.area}>
         <div class={styles.messages}>
         <Welcomer />
+        <Divider />
         </div>
       </div>
       <div class={styles.box}>
