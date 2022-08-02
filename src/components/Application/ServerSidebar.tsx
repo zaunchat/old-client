@@ -53,9 +53,9 @@ function User() {
         <div class={styles.buttons}>
           <SdButton icon={DeffIcon} />
 
-          <SdButton icon={SettingsIcon} />
-
           <SdButton icon={MuteIcon} />
+
+          <SdButton icon={SettingsIcon} />
         </div>
       </div>
     </div>
