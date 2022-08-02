@@ -2,7 +2,7 @@
   width: 100%;
   height: 100%;
   overflow-y: auto;
-  margin-top: 16px;
+  padding-top: 16px;
   & > .container {
     & > .category {
       & > .title {
@@ -18,8 +18,11 @@
       }
       & > .branches {
         & > .branch {
+          cursor: pointer;
+          width: calc(100% - 16px);
+          border-radius: 5px;
+          margin-left: 8px;
           height: 42px;
-          width: 100%;
           display: flex;
           & > .name {
             display: flex;
@@ -88,11 +91,16 @@
         }
       }
       & > .channel {
+        cursor: pointer;
         height: 42px;
-        width: 100%;
+        width: calc(100% - 16px);
+        border-radius: 5px;
+        margin-top: 5px;
+        margin-left: 8px;
         display: flex;
         &:hover {
           background: rgba(255, 255, 255, 0.1);
+          outline: 2px solid rgba(0, 0, 0, 0.3);
         }
         & > * {
           display: flex;
