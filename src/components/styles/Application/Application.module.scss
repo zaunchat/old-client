@@ -12,8 +12,10 @@
     background: #212128;
     display: flex;
     justify-content: center;
+    height: 46px;
     & > .container {
       min-height: 35px;
+      height: 35px;
       width: calc(100% - 50px);
       display: flex;
       flex-direction: row;
