@@ -1,9 +1,15 @@
 import { h } from "preact";
+import { useEffect } from "preact/hooks";
+import { useClient } from "../../hooks/Client";
 import { ServerSidebar, ServersSidebar, ServerNavbar, ApplicationNavbar, MembersNavbar, MembersSidebar, App } from "../../components/Application";
 
 import styles from "./styles/Application.module.scss";
 
 export function Application() {
+  const client = useClient();
+  useEffect(() => {
+    client.login(localStorage.getItem("token")!);
+  }, []) 
   return (
     <div class={styles.container}>
       <div class={styles.navbar}>
