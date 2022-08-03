@@ -1,3 +1,5 @@
+import chalk from "chalk";
+
 interface ILoggerOptions {
   state: "development" | "production";
 }
@@ -22,15 +24,40 @@ export class Logger {
     console.log(...args);
   }
   info(message: string, options?: IInfoOptions) {
-    console.log(`${options?.title ? `[${options.title}]` : `[INFO]`}: ${message}`);
+    console.log(
+      chalk.white`${
+        options?.title
+          ? `[${options.with_title ? "INFO:" : ""}${options.title}]`
+          : `[INFO]`
+      }:` + ` ${message}`
+    );
   }
   debug(message: string, options?: IDebugOptions) {
-    console.log(`${options?.title ? `[${options.with_title ? "DEBUG:" : ""}${options.title}]` : `[DEBUG]`}: ${message}`);
+    if (this.state == "production") return;
+    console.log(
+      chalk.magenta`${
+        options?.title
+          ? `[${options.with_title ? "DEBUG:" : ""}${options.title.toUpperCase()}]`
+          : `[DEBUG]`
+      }` + `: ${message}`
+    );
   }
   error(message: string, options?: IErrorOptions) {
-    console.log(`${options?.title ? `[${options.with_title ? "ERROR:" : ""}${options.title}]` : `[ERROR]`}: ${message}`);
+    console.log(
+      chalk.red`${
+        options?.title
+          ? `[${options.with_title ? "ERROR:" : ""}${options.title.toUpperCase()}]`
+          : `[ERROR]`
+      }`+`: ${message}`
+    );
   }
   warn(message: string, options?: IWarnOptions) {
-    console.log(`${options?.title ? `[${options.with_title ? "WARN:" : ""}${options.title}]` : `[WARN]`}: ${message}`);
+    console.log(
+      chalk.yellow`${
+        options?.title
+          ? `[${options.with_title ? "WARN:" : ""}${options.title.toUpperCase()}]`
+          : `[WARN]`
+      }`+`: ${message}`
+    );
   }
 }
