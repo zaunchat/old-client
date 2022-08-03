@@ -5,6 +5,11 @@ import preact from "@preact/preset-vite";
 import sassDts from "vite-plugin-sass-dts";
 
 export default defineConfig({
+  "optimizeDeps": {
+    "esbuildOptions": {
+      "target": "es2020"
+    }
+  },
   plugins: [
     preact(),
     sassDts({
