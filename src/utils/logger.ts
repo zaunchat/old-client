@@ -13,7 +13,7 @@ interface IErrorOptions extends IDefaultOptions {}
 interface IDebugOptions extends IDefaultOptions {}
 interface IWarnOptions extends IDefaultOptions {}
 
-class Logger {
+export class Logger {
   state: ILoggerOptions["state"];
   constructor(options: ILoggerOptions) {
     this.state = options.state;
