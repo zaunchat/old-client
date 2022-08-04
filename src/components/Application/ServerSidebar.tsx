@@ -1,3 +1,4 @@
+import { ClientUser } from "@itchatapp/client";
 import { Fragment } from "preact";
 import { h } from "preact";
 import { useEffect, useState } from "preact/hooks";
@@ -36,7 +37,7 @@ type IChannel<S extends boolean = false> = S extends true
   ? Omit<IChannel, "category"> & Partial<Pick<IChannel, "category">>
   : IChannelResolve;
 
-function User() {
+function User({ user }: { user: ClientUser }) {
   return (
     <div class={styles.user}>
       <div class={styles.user_container}>
@@ -47,7 +48,8 @@ function User() {
           />
         </div>
         <div class={styles.name}>
-          <div class={styles.username}>Mr.Kasper</div>
+          <div class={styles.username}>{user.username}</div>
+          {/* TODO: ADD USER CLIENT STATUS */}
           <div class={styles.status}>Hello world!</div>
         </div>
         <div class={styles.buttons}>
@@ -196,7 +198,7 @@ function ChannelsAdapter({ channels }: { channels: IChannel[] }) {
   );
 }
 
-export function ServerSidebar() {
+export function ServerSidebar({ user }: { user: ClientUser }) {
   const [voice, setVoice] = useState(true);
   const [voiceUsers, setVoiceUsers] = useState(Array(max + 10).fill(0));
   return (
@@ -207,8 +209,7 @@ export function ServerSidebar() {
             ...Array(3).fill({
               name: "test3123",
               category: { id: "test", name: "WELCOME" },
-              branches: [
-              ],
+              branches: [],
             }),
             ...Array(3).fill({ name: "test1232", category: null }),
           ]}
@@ -261,7 +262,7 @@ export function ServerSidebar() {
         ) : (
           ""
         )}
-        <User />
+        <User user={user} />
       </div>
     </div>
   );
