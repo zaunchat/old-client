@@ -2,7 +2,7 @@ import { h } from "preact";
 import { useState } from "preact/hooks";
 import ReactTextareaAutosize from "react-textarea-autosize";
 
-import styles from "../styles/Application/Application.module.scss";
+import styles from "./styles/Application.module.scss";
 import { EmojiIcon, SendIcon, ShareFilesIcon } from "./assets";
 import {
   DogWelcomerVector,
@@ -15,9 +15,9 @@ function Welcomer() {
   return (
     <div class={styles.welcomer}>
       <div class={styles.header}>
-        <div class={styles.party_vector}>
+        {/* <div class={styles.party_vector}> */}
           <PartyWelcomeVecotr />
-        </div>
+        {/* </div> */}
         <div class={styles.welcome}>WELCOME TO</div>
         <div class={styles.name}>SPOTIFY LISTS</div>
         <div class={styles.description}>
@@ -85,7 +85,7 @@ function MultiMessage({
   );
 }
 
-export function App() {
+export function Application() {
   const [inputRef, setInputRef] = useState<HTMLAreaElement>();
   return (
     <div class={styles.container}>

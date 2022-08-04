@@ -1,6 +1,6 @@
 import { h } from "preact";
 
-import styles from "../../styles/Application/ServerSidebar.module.scss";
+import styles from "../styles/ServerSidebar.module.scss";
 
 export function DotsBlob() {
   return (

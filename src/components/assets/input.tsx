@@ -1,6 +1,6 @@
 import { h } from "preact";
 
-import styles from "../../styles/Application/Application.module.scss";
+import styles from "../styles/Application.module.scss";
 
 export function ShareFilesIcon() {
   return (

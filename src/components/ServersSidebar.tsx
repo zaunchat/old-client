@@ -2,7 +2,7 @@ import { Server as ClientServer } from "@itchatapp/client";
 import { Collection } from "@itchatapp/client/types/src/deps";
 import { h } from "preact";
 
-import styles from "../styles/Application/ServersSidebar.module.scss";
+import styles from "./styles/ServersSidebar.module.scss";
 import { HomeIcon } from "./assets";
 
 function Home() {
@@ -38,7 +38,7 @@ export function ServersSidebar({
     <div class={styles.container}>
       <Home />
       <Divider />
-      {servers.map((server) => {
+      {servers && servers.map((server) => {
         return <Server server={server} />;
       })}
     </div>

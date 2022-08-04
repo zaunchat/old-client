@@ -1,6 +1,6 @@
 import { h } from "preact";
 
-import styles from '../styles/Application/Navbar.module.scss';
+import styles from '../styles/DefaultNavbar.module.scss';
 
 export function ServerNavbar() {
   return <div class={styles.server_navbar}>

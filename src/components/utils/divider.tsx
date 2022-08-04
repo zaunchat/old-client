@@ -1,6 +1,6 @@
 import { h } from "preact";
 
-import styles from '../../styles/Application/utils.module.scss'
+import styles from '../styles/utils.module.scss'
 
 export function Divider({ title }: { title?: string }) {
   return (

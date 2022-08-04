@@ -1,5 +1,5 @@
 import { render, h } from "preact";
-import App from "./app";
+import {App} from "./containers/pages/Router";
 
 if (process.env.NODE_ENV === "development") {
     // ahhhhh this is soo good, it has been a long time from using ts-ignore lol

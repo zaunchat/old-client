@@ -3,7 +3,7 @@ import { Fragment } from "preact";
 import { h } from "preact";
 import { useEffect, useState } from "preact/hooks";
 
-import styles from "../styles/Application/ServerSidebar.module.scss";
+import styles from "./styles/ServerSidebar.module.scss";
 
 import {
   DeffIcon,
