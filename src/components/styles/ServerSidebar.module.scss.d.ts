@@ -1,13 +1,18 @@
 declare const classNames: {
   readonly up_container: "up_container";
+  readonly dms: "dms";
+  readonly convas: "convas";
+  readonly title: "title";
+  readonly conva: "conva";
+  readonly icon: "icon";
+  readonly buttons: "buttons";
+  readonly button: "button";
   readonly container: "container";
   readonly category: "category";
-  readonly title: "title";
   readonly active: "active";
   readonly branches: "branches";
   readonly branch: "branch";
   readonly name: "name";
-  readonly icon: "icon";
   readonly continue: "continue";
   readonly middle: "middle";
   readonly first: "first";
@@ -20,28 +25,32 @@ declare const classNames: {
   readonly avatar: "avatar";
   readonly status: "status";
   readonly username: "username";
-  readonly buttons: "buttons";
   readonly voice: "voice";
   readonly bgBlob: "bgBlob";
   readonly details: "details";
   readonly timer: "timer";
-  readonly button: "button";
   readonly head: "head";
   readonly span_server: "span_server";
   readonly span_channel: "span_channel";
   readonly members: "members";
+  readonly divider: "divider";
 };
 export default classNames;
 export type ClassNames =
   | "up_container"
+  | "dms"
+  | "convas"
+  | "title"
+  | "conva"
+  | "icon"
+  | "buttons"
+  | "button"
   | "container"
   | "category"
-  | "title"
   | "active"
   | "branches"
   | "branch"
   | "name"
-  | "icon"
   | "continue"
   | "middle"
   | "first"
@@ -54,13 +63,12 @@ export type ClassNames =
   | "avatar"
   | "status"
   | "username"
-  | "buttons"
   | "voice"
   | "bgBlob"
   | "details"
   | "timer"
-  | "button"
   | "head"
   | "span_server"
   | "span_channel"
-  | "members";
+  | "members"
+  | "divider";
