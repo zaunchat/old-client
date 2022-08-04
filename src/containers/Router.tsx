@@ -1,17 +1,22 @@
 import { h } from "preact";
 import { useEffect, useState } from "preact/hooks";
-import { useClient } from "../../hooks/Client";
+import { useClient } from "../hooks/Client";
 import {
   ServerSidebar,
   ServersSidebar,
-  ServerNavbar,
-  ApplicationNavbar,
-  MembersNavbar,
+  ServerMSBNavbar,
+  ServerRSBNavbar,
   MembersSidebar,
   Application,
-} from "../../components";
-import "../../styles/index.scss";
-import styles from "./styles/Application.module.scss";
+  ServerLSBNavbar,
+  HomeLSBNavbar,
+  HomeMSBNavbar,
+  HomeRSBNavbar,
+  DmMSBNavbar,
+  DmRSBNavbar,
+} from "../components";
+import "../styles/index.scss";
+import styles from "./pages/styles/Application.module.scss";
 import { Collection } from "@itchatapp/client/types/src/deps";
 import { ClientUser, Server } from "@itchatapp/client";
 import {
@@ -44,23 +49,27 @@ export function App() {
 
   function Main() {
     const location = useLocation().history.location;
-    const idk = location.pathname.split("/").filter(Boolean);
-    const isHome = idk.length == 0;
-    const isDM = idk.length == 1;
-    const isServer = idk.length == 2;
+    const rs = location.pathname.split("/").filter(Boolean);
+    const isHome = rs.length == 0;
+    const isDM = rs.length == 1;
+    const isServer = rs.length == 2;
     const isNonOfEm = !(isHome || isDM || isServer);
     return (
       <Fragment>
         <div class={styles.navbar}>
           <div class={styles.servers_navbar}>
-            {isHome && <ServerNavbar />}
-            <ServerNavbar />
+            {(isHome || isDM) && <HomeLSBNavbar />}
+            {isServer && <ServerLSBNavbar />}
           </div>
           <div class={styles.application_navbar}>
-            <ApplicationNavbar />
+            {isHome && <HomeMSBNavbar />}
+            {isDM && <DmMSBNavbar />}
+            {isServer && <ServerMSBNavbar />}
           </div>
           <div class={styles.members_navbar}>
-            <MembersNavbar />
+            {isServer && <ServerRSBNavbar />}
+            {isHome && <HomeRSBNavbar />}
+            {isDM && <DmRSBNavbar />}
           </div>
         </div>
         <div class={styles.server_sidebar}>
