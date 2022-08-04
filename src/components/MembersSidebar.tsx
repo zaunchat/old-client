@@ -58,7 +58,7 @@ function Category({ category }: { category: ICategory }) {
     </div>
   );
 }
-export function MembersSidebar() {
+export function RSidebar() {
   const [categories, setCategories] = useState<ICategory[]>(
     Array(2).fill({
       name: "Members",

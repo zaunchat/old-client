@@ -85,7 +85,7 @@ function MultiMessage({
   );
 }
 
-export function Application() {
+export function MApplication() {
   const [inputRef, setInputRef] = useState<HTMLAreaElement>();
   return (
     <div class={styles.container}>

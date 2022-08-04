@@ -6,8 +6,6 @@ import {
   ServersSidebar,
   ServerMSBNavbar,
   ServerRSBNavbar,
-  MembersSidebar,
-  Application,
   ServerLSBNavbar,
   HomeLSBNavbar,
   HomeMSBNavbar,
@@ -16,7 +14,7 @@ import {
   DmRSBNavbar,
 } from "../components";
 import "../styles/index.scss";
-import styles from "./pages/styles/Application.module.scss";
+import styles from "./styles/Application.module.scss";
 import { Collection } from "@itchatapp/client/types/src/deps";
 import { ClientUser, Server } from "@itchatapp/client";
 import {
@@ -76,10 +74,10 @@ export function App() {
           {user && <ServerSidebar user={user} />}
         </div>
         <div class={styles.application}>
-          <Application />
+          {/* <Application /> */}
         </div>
         <div class={styles.members_sidebar}>
-          <MembersSidebar />
+          {/* <MembersSidebar /> */}
         </div>
       </Fragment>
     );
