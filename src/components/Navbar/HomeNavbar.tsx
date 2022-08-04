@@ -11,7 +11,11 @@ export function HomeLSBNavbar() {
 }
 
 export function HomeMSBNavbar() {
-  return <div class={styles.MNav}>HomeNavbar</div>;
+  return <div class={styles.MNav}>
+    <div class={styles.tag}>&</div>
+    <div class={styles.divider} />
+    <div class={styles.title}>FRIENDS</div>
+  </div>;
 }
 
 export function HomeRSBNavbar() {
