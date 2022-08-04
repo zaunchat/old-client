@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "@itchatapp/client": "^1.0.6",
+    "@tanstack/react-location": "^3.7.4",
     "chalk": "^5.0.1",
     "preact": "^10.10.0",
     "preact-render-to-string": "^5.2.1",
