@@ -1,0 +1,34 @@
+$searchConvaMarginBlock: 12px;
+$searchConvaMarginInline: 12px;
+$searchConvaMarginLeftPadding: 10px;
+
+.LNav {
+  height: 100%;
+  width: 100%;
+  & > button {
+    cursor: pointer;
+    outline: none;
+    width: calc(100% - $searchConvaMarginBlock * 2);
+    height: calc(100% - $searchConvaMarginBlock * 2);
+    margin-block: $searchConvaMarginBlock;
+    margin-inline: $searchConvaMarginBlock;
+    background: #15151c;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.8);
+    padding-left: $searchConvaMarginLeftPadding;
+  }
+}
+.MNav {
+  height: 100%;
+  width: 100%;
+}
+.RNav {
+  height: 100%;
+  width: 100%;
+}
