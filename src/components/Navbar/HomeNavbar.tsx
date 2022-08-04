@@ -19,5 +19,6 @@ export function HomeMSBNavbar() {
 }
 
 export function HomeRSBNavbar() {
-  return <div class={styles.RNav}>HomeNavbar</div>;
+  // TODO: add last messages
+  return <div class={styles.RNav}></div>;
 }
