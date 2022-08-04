@@ -70,15 +70,11 @@ export function App() {
             {isDM && <DmRSBNavbar />}
           </div>
         </div>
-        <div class={styles.server_sidebar}>
+        <div class={styles.left_sidebar}>
           {user && <ServerSidebar user={user} />}
         </div>
-        <div class={styles.application}>
-          {/* <Application /> */}
-        </div>
-        <div class={styles.members_sidebar}>
-          {/* <MembersSidebar /> */}
-        </div>
+        <div class={styles.application}>{/* <Application /> */}</div>
+        <div class={styles.members_sidebar}>{/* <MembersSidebar /> */}</div>
       </Fragment>
     );
   }

@@ -1,7 +1,7 @@
 declare const classNames: {
   readonly container: "container";
   readonly servers_sidebar: "servers_sidebar";
-  readonly server_sidebar: "server_sidebar";
+  readonly left_sidebar: "left_sidebar";
   readonly members_sidebar: "members_sidebar";
   readonly application: "application";
   readonly navbar: "navbar";
@@ -13,7 +13,7 @@ export default classNames;
 export type ClassNames =
   | "container"
   | "servers_sidebar"
-  | "server_sidebar"
+  | "left_sidebar"
   | "members_sidebar"
   | "application"
   | "navbar"
