@@ -2,7 +2,6 @@ import { h } from "preact";
 import { useEffect, useState } from "preact/hooks";
 import { useClient } from "../hooks/Client";
 import {
-  ServerSidebar,
   ServersSidebar,
   ServerMSBNavbar,
   ServerRSBNavbar,
@@ -25,6 +24,7 @@ import {
   useLocation,
 } from "@tanstack/react-location";
 import { Fragment } from "preact";
+import LeftSidebar from "../components/LeftSidebar/LeftSidebar";
 
 export function App() {
   const [servers, setServers] = useState<Collection<string, Server>>();
@@ -71,10 +71,10 @@ export function App() {
           </div>
         </div>
         <div class={styles.left_sidebar}>
-          {user && <ServerSidebar user={user} />}
+          <LeftSidebar />
         </div>
         <div class={styles.application}>{/* <Application /> */}</div>
-        <div class={styles.right_sidebar}>{/* <MembersSidebar /> */}</div>
+        <div class={styles.right_sidebar}>{/* <LeftSidebar /> */}</div>
       </Fragment>
     );
   }

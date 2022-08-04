@@ -1,9 +1,9 @@
 import { h } from "preact";
 import { useState } from "preact/hooks";
 
-import styles from "./styles/MembersSidebar.module.scss";
+import styles from "../styles/MembersSidebar.module.scss";
 
-import { InviteAddIcon, InvitePersonIcon } from './assets'
+import { InviteAddIcon, InvitePersonIcon } from '../assets'
 
 interface IMember {
   username: string;
