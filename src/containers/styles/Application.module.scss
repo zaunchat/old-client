@@ -15,7 +15,7 @@
 }
 
 .left_sidebar,
-.members_sidebar {
+.right_sidebar {
   background-color: $main-sidebar-bg;
 }
 
@@ -29,15 +29,15 @@
   display: grid;
   grid-template-columns: 240px calc(100% - 480px) 240px;
 }
-.servers_navbar {
+.left_navbar {
   background-color: $main-sidebar-bg;
   border-bottom: 1px solid #000000;
 }
-.application_navbar {
+.mid_navbar {
   background-color: $application-bg;
   border-bottom: 1px solid #000000;
 }
-.members_navbar {
+.right_navbar {
   background-color: $main-sidebar-bg;
   border-bottom: 1px solid #000000;
 }

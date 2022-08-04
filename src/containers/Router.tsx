@@ -55,16 +55,16 @@ export function App() {
     return (
       <Fragment>
         <div class={styles.navbar}>
-          <div class={styles.servers_navbar}>
+          <div class={styles.left_navbar}>
             {(isHome || isDM) && <HomeLSBNavbar />}
             {isServer && <ServerLSBNavbar />}
           </div>
-          <div class={styles.application_navbar}>
+          <div class={styles.mid_navbar}>
             {isHome && <HomeMSBNavbar />}
             {isDM && <DmMSBNavbar />}
             {isServer && <ServerMSBNavbar />}
           </div>
-          <div class={styles.members_navbar}>
+          <div class={styles.right_navbar}>
             {isServer && <ServerRSBNavbar />}
             {isHome && <HomeRSBNavbar />}
             {isDM && <DmRSBNavbar />}
@@ -74,7 +74,7 @@ export function App() {
           {user && <ServerSidebar user={user} />}
         </div>
         <div class={styles.application}>{/* <Application /> */}</div>
-        <div class={styles.members_sidebar}>{/* <MembersSidebar /> */}</div>
+        <div class={styles.right_sidebar}>{/* <MembersSidebar /> */}</div>
       </Fragment>
     );
   }
