@@ -50,11 +50,8 @@ function Divider() {
   return <div class={styles.divider}></div>;
 }
 
-export function ServersSidebar({
-  servers,
-}: {
-  servers: Collection<string, ClientServer>;
-}) {
+export function ServersSidebar() {
+  const servers: any = [];
   return (
     <div class={styles.container}>
       <Home />

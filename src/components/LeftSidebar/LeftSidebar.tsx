@@ -10,8 +10,9 @@ import { useClient } from "../../hooks/Client";
 import ServerAdapter from "./Server/ServerAdapter";
 import DMsAdapter from "./DMs/DmsAdapter";
 
-export default function LeftSidebar() {
-  const { user } = useClient();
+import { ClientUser } from "@itchatapp/client";
+
+export default function LeftSidebar({ user }: { user: ClientUser | null }) {
   const [voice, setVoice] = useState(true);
   const [voiceUsers, setVoiceUsers] = useState(Array(10).fill(0));
   const rs = location.pathname.split("/").filter(Boolean);

@@ -1,6 +1,6 @@
 import { Client } from "@itchatapp/client";
 import { createContext } from "preact";
-import { useContext } from "preact/hooks";
+import { useContext, useEffect } from "preact/hooks";
 
 // FOR DEVELOPMENT PURPOSES ONLY
 const client = new Client(
@@ -17,6 +17,10 @@ const client = new Client(
 client.on("ready", () => {
   console.log(`${client.user?.username} is ready!`);
 });
-
+console.log('hello')
 export const ClientContext = createContext(client);
-export const useClient = () => useContext(ClientContext);
+export const useClient = () => {
+
+  
+  return useContext(ClientContext)
+};
