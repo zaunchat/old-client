@@ -56,6 +56,9 @@
         }
       }
     }
+    & > .friends:last-child {
+      margin-top: 25px;
+    }
   }
   & > .area {
     height: 100%;

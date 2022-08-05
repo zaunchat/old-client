@@ -53,6 +53,7 @@ export default function HomeAdapter() {
     return (
         <div class={styles.friends_container}>
           <FriendsLis title="CLOSE FRIENDS" friends={friends} />
+          <FriendsLis title="YOUR FRIENDS" friends={friends} />
         </div>
     )
 }
