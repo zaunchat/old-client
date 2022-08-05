@@ -10,7 +10,7 @@
     align-items: center;
     margin-top: 25px;
     & > .friends {
-      width: 90%;
+      width: calc(100% - 50px);
       & > .title {
         width: 100%;
         & > .line {
