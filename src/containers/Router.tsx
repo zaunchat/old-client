@@ -66,6 +66,7 @@ export function App() {
   const client = useClient();
 
   function handleServers() {
+    console.log('test')
     setServers(client.servers.cache);
   }
   useEffect(() => {
@@ -75,7 +76,8 @@ export function App() {
     });
     client.on("ready", handleServers);
     client.on("channelUpdate", handleServers);
-    client.on("serverUpdate", handleServers);
+    client.on("serverCreate", handleServers);
+    client.on("serverDelete", handleServers);
   }, []);
   const location = new ReactLocation();
 
