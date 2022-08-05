@@ -17,22 +17,35 @@ import styles from "./styles/Application.module.scss";
 import { Collection } from "@itchatapp/client/types/src/deps";
 import { ClientUser, Server } from "@itchatapp/client";
 import {
-  Link,
   Outlet,
-  ReactLocation,
   Router,
-  useLocation,
+  ReactLocation,
+  useMatch
 } from "@tanstack/react-location";
 import { Fragment } from "preact";
 import LeftSidebar from "../components/LeftSidebar/LeftSidebar";
 
+const useReactPath = () => {
+  const [path, setPath] = useState(window.location.pathname);
+  const listenToPopstate = () => {
+    const winPath = window.location.pathname;
+    setPath(winPath);
+  };
+  useEffect(() => {
+    window.addEventListener("popstate", listenToPopstate);
+    return () => {
+      window.removeEventListener("popstate", listenToPopstate);
+    };
+  }, []);
+  return path;
+};
+
 function Main() {
-  const location = useLocation().history.location;
-  const rs = location.pathname.split("/").filter(Boolean);
-  const isHome = rs.length == 0;
-  const isDM = rs.length == 1;
-  const isServer = rs.length == 2;
-  const isNonOfEm = !(isHome || isDM || isServer);
+  const { pathname } = useMatch()
+  const rs = pathname.split("/").filter(Boolean);
+  const [isHome, setIsHome] = useState(rs.length == 0);
+  const [isDM, setIsDM] = useState(rs.length == 1);
+  const [isServer, setIsServer] = useState(rs.length == 2);
   return (
     <Fragment>
       <div class={styles.navbar}>
@@ -70,7 +83,7 @@ export function App() {
     setServers(client.servers.cache);
   }
   useEffect(() => {
-    client.login("inOceCYybJ2MyUxGhHWEoM36BxBgOUXTk95cOCPnq50Vt7AtOaniUGWHYm8y7Ytn");
+    client.login("VASFYE-cLR4FBSFWcoKObGpDni8BCIYxajBGFH7OuP_p8EtKhdMLbWOcZ4FWwnpD");
     client.on("ready", () => {
       setUser(client.user!);
     });
@@ -106,7 +119,12 @@ export function App() {
         <Outlet />
       </div>
 ) : (
-  <div>LOADING...</div>
+  <div class={styles.container}>
+        <div class={styles.servers_sidebar}>
+          {<ServersSidebar servers={servers!} />}
+        </div>
+        <Outlet />
+      </div>
 )}
     </Router>
   );
