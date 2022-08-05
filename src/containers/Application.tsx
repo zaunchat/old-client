@@ -19,6 +19,7 @@ import { useClient } from "../hooks/Client";
 export default function Application() {
   const client = useClient();
   const [user, setUser] = useState(client.user);
+  const [servers, setServers] = useState(client.servers.cache);
   const { pathname } = useMatch();
   const rs = pathname.split("/").filter(Boolean);
   const isHome = rs.length == 0;
@@ -32,7 +33,7 @@ export default function Application() {
       setUser(client.user);
     });
     function handleServers() {
-      console.log(client.servers.cache);
+      setServers(client.servers.cache);
     }
     client.on("ready", handleServers);
     client.on("serverCreate", handleServers);
@@ -41,7 +42,7 @@ export default function Application() {
   return (
     <Fragment>
       <div class={styles.servers_sidebar}>
-        <ServersSidebar />
+        <ServersSidebar servers={servers} />
       </div>
       <div class={styles.navbar}>
         <div class={styles.left_navbar}>
