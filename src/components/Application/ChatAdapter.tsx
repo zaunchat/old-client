@@ -1,22 +1,20 @@
-import { h } from "preact";
+import { Fragment, h } from "preact";
 import { useState } from "preact/hooks";
 import ReactTextareaAutosize from "react-textarea-autosize";
-
-import styles from "./styles/Application.module.scss";
-import { EmojiIcon, SendIcon, ShareFilesIcon } from "./assets";
+import { EmojiIcon, SendIcon, ShareFilesIcon } from "../assets";
 import {
   DogWelcomerVector,
   PartyWelcomeVecotr,
   WelcomeBlob,
-} from "./assets/Welcomer";
-import { Divider } from "./utils";
-
+} from "../assets/Welcomer";
+import styles from "../styles/Application.module.scss";
+import { Divider } from "../utils";
 function Welcomer() {
   return (
     <div class={styles.welcomer}>
       <div class={styles.header}>
         {/* <div class={styles.party_vector}> */}
-          <PartyWelcomeVecotr />
+        <PartyWelcomeVecotr />
         {/* </div> */}
         <div class={styles.welcome}>WELCOME TO</div>
         <div class={styles.name}>SPOTIFY LISTS</div>
@@ -65,11 +63,7 @@ interface IMultiMessage {
   contents: string[];
 }
 
-function MultiMessage({
-  message,
-}: {
-  message: IMultiMessage
-}) {
+function MultiMessage({ message }: { message: IMultiMessage }) {
   return (
     <div class={styles.message}>
       <div class={styles.first_wrapper}>
@@ -78,17 +72,23 @@ function MultiMessage({
       <div class={styles.second_wrapper}>
         <div class={styles.name}>{message.author.name}</div>
         {message.contents.map((content, i) => (
-          <div class={`${styles.content} ${i !== message.contents.length-1 ? styles.multi : ""}`}>{content}</div>
+          <div
+            class={`${styles.content} ${
+              i !== message.contents.length - 1 ? styles.multi : ""
+            }`}
+          >
+            {content}
+          </div>
         ))}
       </div>
     </div>
   );
 }
 
-export function MApplication() {
+export default function ChatAdapter() {
   const [inputRef, setInputRef] = useState<HTMLAreaElement>();
   return (
-    <div class={styles.container}>
+    <Fragment>
       <div class={styles.area}>
         <div class={styles.messages}>
           <Welcomer />
@@ -142,6 +142,6 @@ export function MApplication() {
           </div>
         </div>
       </div>
-    </div>
+    </Fragment>
   );
 }
