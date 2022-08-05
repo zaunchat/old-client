@@ -3,6 +3,60 @@
   flex-direction: column;
   width: 100%;
   height: 100%;
+  & > .friends_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+    & > .friends {
+      width: 90%;
+      & > .title {
+        width: 100%;
+        & > .line {
+          width: 100%;
+          height: 1px;
+          background: #CBCBCB;
+          opacity: 0.2;
+          margin-top: 10px;
+        }
+      }
+      & > .friend {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        background: #15151C;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+        min-height: 42px;
+        margin-top: 10px;
+        & > .leftSide {
+          display: flex;
+          align-items: center;
+          & > h5 {
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 17px;
+          }
+          & > img {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            margin-right: 10px;
+            margin-left: 15px;
+          }
+        }
+        & > .rightSide {
+          display: flex;
+          margin-right: 15px;
+          & > div:first-child {
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
   & > .area {
     height: 100%;
     overflow: hidden auto;
@@ -153,3 +207,4 @@
   justify-content: center;
   align-items: center;
 }
+
