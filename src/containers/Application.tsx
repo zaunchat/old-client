@@ -41,7 +41,7 @@ export default function Application() {
     client.on("serverDelete", handleServers);
   }, []);
   return (
-    <Fragment>
+    <div class={styles.container}>
       <div class={styles.servers_sidebar}>
         <ServersSidebar servers={servers} />
       </div>
@@ -66,6 +66,6 @@ export default function Application() {
       </div>
       <div class={styles.application}><MApplication /></div>
       <div class={styles.right_sidebar}>{/* <LeftSidebar /> */}</div>
-    </Fragment>
+    </div>
   );
 }
