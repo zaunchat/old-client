@@ -6,9 +6,9 @@ import { useContext } from "preact/hooks";
 const client = new Client(
   process.env.NODE_ENV === "development"
     ? {
-        rest: { api: "https://api-dev.itchat.world" },
+        rest: { api: "https://8080-itchatapp-api-kvzoozzezf3.ws-eu59.gitpod.io" },
         ws: {
-          url: "wss://api-dev.itchat.world/ws",
+          url: "wss://8080-itchatapp-api-kvzoozzezf3.ws-eu59.gitpod.io/ws",
         },
       }
     : {}

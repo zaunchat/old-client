@@ -26,6 +26,40 @@ import {
 import { Fragment } from "preact";
 import LeftSidebar from "../components/LeftSidebar/LeftSidebar";
 
+function Main() {
+  const location = useLocation().history.location;
+  const rs = location.pathname.split("/").filter(Boolean);
+  const isHome = rs.length == 0;
+  const isDM = rs.length == 1;
+  const isServer = rs.length == 2;
+  const isNonOfEm = !(isHome || isDM || isServer);
+  return (
+    <Fragment>
+      <div class={styles.navbar}>
+        <div class={styles.left_navbar}>
+          {(isHome || isDM) && <HomeLSBNavbar />}
+          {isServer && <ServerLSBNavbar />}
+        </div>
+        <div class={styles.mid_navbar}>
+          {isHome && <HomeMSBNavbar />}
+          {isDM && <DmMSBNavbar />}
+          {isServer && <ServerMSBNavbar />}
+        </div>
+        <div class={styles.right_navbar}>
+          {isServer && <ServerRSBNavbar />}
+          {isHome && <HomeRSBNavbar />}
+          {isDM && <DmRSBNavbar />}
+        </div>
+      </div>
+      <div class={styles.left_sidebar}>
+        <LeftSidebar />
+      </div>
+      <div class={styles.application}>{/* <Application /> */}</div>
+      <div class={styles.right_sidebar}>{/* <LeftSidebar /> */}</div>
+    </Fragment>
+  );
+}
+
 export function App() {
   const [servers, setServers] = useState<Collection<string, Server>>();
   const [user, setUser] = useState<ClientUser>();
@@ -35,7 +69,7 @@ export function App() {
     setServers(client.servers.cache);
   }
   useEffect(() => {
-    client.login(localStorage.getItem("token")!);
+    client.login("inOceCYybJ2MyUxGhHWEoM36BxBgOUXTk95cOCPnq50Vt7AtOaniUGWHYm8y7Ytn");
     client.on("ready", () => {
       setUser(client.user!);
     });
@@ -44,40 +78,6 @@ export function App() {
     client.on("serverUpdate", handleServers);
   }, []);
   const location = new ReactLocation();
-
-  function Main() {
-    const location = useLocation().history.location;
-    const rs = location.pathname.split("/").filter(Boolean);
-    const isHome = rs.length == 0;
-    const isDM = rs.length == 1;
-    const isServer = rs.length == 2;
-    const isNonOfEm = !(isHome || isDM || isServer);
-    return (
-      <Fragment>
-        <div class={styles.navbar}>
-          <div class={styles.left_navbar}>
-            {(isHome || isDM) && <HomeLSBNavbar />}
-            {isServer && <ServerLSBNavbar />}
-          </div>
-          <div class={styles.mid_navbar}>
-            {isHome && <HomeMSBNavbar />}
-            {isDM && <DmMSBNavbar />}
-            {isServer && <ServerMSBNavbar />}
-          </div>
-          <div class={styles.right_navbar}>
-            {isServer && <ServerRSBNavbar />}
-            {isHome && <HomeRSBNavbar />}
-            {isDM && <DmRSBNavbar />}
-          </div>
-        </div>
-        <div class={styles.left_sidebar}>
-          <LeftSidebar />
-        </div>
-        <div class={styles.application}>{/* <Application /> */}</div>
-        <div class={styles.right_sidebar}>{/* <LeftSidebar /> */}</div>
-      </Fragment>
-    );
-  }
 
   return (
     <Router
@@ -96,12 +96,16 @@ export function App() {
         },
       ]}
     >
-      <div class={styles.container}>
+{user ? (
+        <div class={styles.container}>
         <div class={styles.servers_sidebar}>
           {<ServersSidebar servers={servers!} />}
         </div>
         <Outlet />
       </div>
+) : (
+  <div>LOADING...</div>
+)}
     </Router>
   );
 }
