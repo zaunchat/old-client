@@ -6,7 +6,6 @@ import styles from "../styles/ServerSidebar.module.scss";
 
 import User from "./User";
 import Voice from "./Voice";
-import { useClient } from "../../hooks/Client";
 import ServerAdapter from "./Server/ServerAdapter";
 import DMsAdapter from "./DMs/DmsAdapter";
 
