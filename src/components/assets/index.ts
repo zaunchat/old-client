@@ -4,3 +4,4 @@ export * from "./Home";
 export * from "./Status";
 export * from "./Invite";
 export * from "./input";
+export * from "./Add";
