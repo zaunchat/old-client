@@ -1,5 +1,12 @@
 declare const classNames: {
   readonly container: "container";
+  readonly friends_container: "friends_container";
+  readonly friends: "friends";
+  readonly title: "title";
+  readonly line: "line";
+  readonly friend: "friend";
+  readonly leftSide: "leftSide";
+  readonly rightSide: "rightSide";
   readonly area: "area";
   readonly messages: "messages";
   readonly message: "message";
@@ -22,6 +29,13 @@ declare const classNames: {
 export default classNames;
 export type ClassNames =
   | "container"
+  | "friends_container"
+  | "friends"
+  | "title"
+  | "line"
+  | "friend"
+  | "leftSide"
+  | "rightSide"
   | "area"
   | "messages"
   | "message"

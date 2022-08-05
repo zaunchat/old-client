@@ -10,6 +10,7 @@ import {
   DmMSBNavbar,
   DmRSBNavbar,
   ServersSidebar,
+  MApplication,
 } from "../components";
 import LeftSidebar from "../components/LeftSidebar/LeftSidebar";
 import { useMatch } from "@tanstack/react-location";
@@ -63,7 +64,7 @@ export default function Application() {
       <div class={styles.left_sidebar}>
       <LeftSidebar user={user} />
       </div>
-      <div class={styles.application}>{/* <Application /> */}</div>
+      <div class={styles.application}><MApplication /></div>
       <div class={styles.right_sidebar}>{/* <LeftSidebar /> */}</div>
     </Fragment>
   );
