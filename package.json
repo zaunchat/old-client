@@ -31,7 +31,7 @@
   "devDependencies": {
     "@preact/preset-vite": "^2.3.0",
     "@types/enzyme": "^3.10.12",
-    "@types/jest": "^27.4.1",
+    "@types/jest": "^29.1.2",
     "@typescript-eslint/eslint-plugin": "^5.30.6",
     "@typescript-eslint/parser": "^5.30.6",
     "enzyme": "^3.11.0",
