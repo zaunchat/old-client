@@ -1,6 +1,8 @@
 import { h } from "preact";
-import ChatTextChannelFilledIcon from "../../assets/Application/Channels/Text/Filled";
-import ChatTextChannelOutlinedIcon from "../../assets/Application/Channels/Text/Outlined";
+import {
+  TextChannelOutlinedIcon,
+  TextChannelFilledIcon,
+} from "../../assets/Application/Channels/Text";
 import styles from "../styles/Sidebar/Channels.module.scss";
 export function ChannelsSidebar() {
   return (
@@ -13,10 +15,10 @@ export function ChannelsSidebar() {
         />
       </div>
       <div class={styles.wrapper}>
-      <div class={styles.category}>MINECRAFT</div>
+        <div class={styles.category}>MINECRAFT</div>
         <div class={styles.container}>
           <div class={styles.channel}>
-            <ChatTextChannelOutlinedIcon />
+            <TextChannelOutlinedIcon />
             <div className={styles.title}>CODES</div>
             {/* <div className={styles.notification}></div> */}
           </div>

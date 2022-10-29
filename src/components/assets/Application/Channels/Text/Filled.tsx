@@ -1,6 +1,6 @@
 import { h } from "preact";
 
-export default function ChatTextChannelFilledIcon() {
+export function TextChannelFilledIcon() {
   return (
     <svg
       width="17"
