@@ -6,21 +6,34 @@ import {
   ChatVoiceMessageIcon,
 } from "../../assets/Application/Chat";
 import { useState } from "preact/hooks";
+import { TextChannelFilledIcon } from "../../assets/Application/Channels";
 export function ChatSidebar() {
   const [arr, setArr] = useState<string[]>(["Content example"]);
   const [content, setContent] = useState("");
   return (
     <div className={styles.container}>
-      <div class={styles.navbar}></div>
+      <div class={styles.navbar}>
+        <div class={styles.left}>
+          <TextChannelFilledIcon w={"20"} />
+          <div class={styles.divider} />
+          <div>Title</div>
+        </div>
+      </div>
       <div class={styles.area}>
         <div class={styles.white_space}></div>
-        {arr.map((t) => <div>{t}</div>)}
+        {arr.map((t) => (
+          <div>{t}</div>
+        ))}
       </div>
       <div class={styles.input}>
-        <button onClick={() => {
-          setArr(ar => [...ar, content])
-          setContent("");
-        }}>example</button>
+        <button
+          onClick={() => {
+            setArr((ar) => [...ar, content]);
+            setContent("");
+          }}
+        >
+          example
+        </button>
         <ReactTextareaAutosize
           placeholder="Type your message here..."
           value={content}
