@@ -1,5 +1,133 @@
+@mixin divider {
+  width: 101px;
+  height: 1px;
+  background-color: #595959;
+}
+
 .container {
-    min-width: 305px;
-    height: 100%;
-    background-color: blue;
+  min-width: 305px;
+  height: 100%;
+  background-color: #111111;
+  display: flex;
+  justify-content: center;
+  & > .wrapper {
+    width: calc(100% - 50px);
+    margin-block: 25px;
+    display: grid;
+    grid-template-rows: calc(49px + 15px + 2px) 40px 1fr auto;
+    gap: 25px;
+    flex-direction: column;
+    & > .current {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      & > .divider {
+        @include divider;
+      }
+    }
+    & > .servers {
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    & > .input_wrapper {
+      min-height: 40px;
+      min-width: 100%;
+      background-color: #1c1c1c;
+      border-radius: 5px;
+      & > input {
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        font-family: "Oswald";
+        font-style: normal;
+        font-weight: 700;
+        padding-left: 15px;
+      }
+    }
+    & > .details {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      & > .divider {
+        @include divider;
+      }
+      & > .down_bar {
+        height: 49px;
+        width: 100%;
+        & > .left {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          gap: 20px;
+          & > img {
+            border-radius: 100%;
+            width: 49px;
+            height: 100%;
+          }
+          & > .user {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            & > .username {
+              font-family: Oswald;
+              font-size: 16px;
+              font-weight: 700;
+              line-height: 24px;
+              letter-spacing: 0em;
+              text-align: left;
+              color: #ffd9d9;
+            }
+            & > .status {
+              font-family: Oswald;
+              font-size: 12px;
+              font-weight: 400;
+              line-height: 18px;
+              letter-spacing: 0em;
+              text-align: left;
+              color: #595959;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.server_container {
+  display: flex;
+  gap: 20px;
+  & > .icon {
+    width: 49px;
+    height: 49px;
+    background: #1c1c1c;
+    border-radius: 100%;
+    outline: none;
+  }
+  & > .title {
+    & > .name {
+      height: 27px;
+      font-family: "Oswald";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 27px;
+    }
+    & > .users {
+      display: flex;
+      & > div {
+        width: 10px;
+        & > img {
+          width: 15px;
+          height: 15px;
+          border-radius: 100%;
+        }
+      }
+    }
+  }
 }
