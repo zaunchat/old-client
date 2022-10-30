@@ -22,7 +22,7 @@ export function ChatSidebar() {
       <div class={styles.area}>
         <div class={styles.white_space} />
         <div class={styles.messages}>
-        {arr.map((t) => (
+          {arr.map((t) => (
             <div class={styles.message}>
               <img src="https://cdn.discordapp.com/avatars/456091385066553355/cf62b15be122834319756e88c75ce3d8.webp?size=96" />
               <div class={styles.wrapper}>
@@ -47,19 +47,27 @@ export function ChatSidebar() {
         </div>
       </div>
       <div class={styles.input}>
-        <button
-          onClick={() => {
-            setArr((ar) => [...ar, content]);
-            setContent("");
-          }}
-        >
-          example
-        </button>
         <ReactTextareaAutosize
           placeholder="Type your message here..."
           value={content}
           onChange={(e: any) => setContent(e.target.value)}
           maxRows={10}
+          onKeyPress={(e: {
+            key: string;
+            which: string;
+            keyCode: number;
+            shiftKey: any;
+            preventDefault: any;
+          }) => {
+            if (e.key === "Enter" && !e.shiftKey) {
+              // Don't generate a new line
+              e.preventDefault();
+              setArr((ar) => [...ar, content]);
+              setContent("");
+              // Do something else such as send the message to back-end
+              // ...
+            }
+          }}
         />
         <div class={styles.buttons}>
           <div class={styles.wrapper}>
