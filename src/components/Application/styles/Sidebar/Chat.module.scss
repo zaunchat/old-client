@@ -23,9 +23,11 @@
   & > .area {
     max-height: 100%;
     width: 100%;
+    min-width: 100%;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
+    overflow-x: hidden;
     align-items: center;
     & > .messages {
       width: calc(100% - 50px);

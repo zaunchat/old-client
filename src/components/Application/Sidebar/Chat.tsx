@@ -22,15 +22,6 @@ export function ChatSidebar() {
       <div class={styles.area}>
         <div class={styles.white_space} />
         <div class={styles.messages}>
-          {arr.map((t) => (
-            <div class={styles.message}>
-              <img src="https://cdn.discordapp.com/avatars/456091385066553355/cf62b15be122834319756e88c75ce3d8.webp?size=96" />
-              <div class={styles.wrapper}>
-                <div class={styles.username}>Mr.Kasper</div>
-                <div class={styles.content}>{t}</div>
-              </div>
-            </div>
-          ))}
           <div class={styles.divider}>
             <div>NEW</div>
             <span />
