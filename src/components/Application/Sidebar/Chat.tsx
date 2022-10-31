@@ -9,7 +9,7 @@ import { useEffect, useRef, useState } from "preact/hooks";
 import { TextChannelFilledIcon } from "../../assets/Application/Channels";
 export function ChatSidebar() {
   const bottomRef = useRef(null);
-  const [arr, setArr] = useState<string[]>(["Content example", "test"]);
+  const [arr, setArr] = useState<string[]>(["asdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsa","Content exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent example", "test",]);
   const [content, setContent] = useState("");
   useEffect(() => {
     bottomRef.current?.scrollIntoView({behavior: 'smooth'});
