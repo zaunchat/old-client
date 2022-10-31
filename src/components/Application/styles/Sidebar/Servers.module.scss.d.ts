@@ -1,38 +1,42 @@
 declare const classNames: {
-  readonly container: "container";
+  readonly collapsed: "collapsed";
   readonly wrapper: "wrapper";
-  readonly current: "current";
+  readonly server_container: "server_container";
+  readonly title: "title";
   readonly divider: "divider";
-  readonly servers: "servers";
-  readonly input_wrapper: "input_wrapper";
   readonly details: "details";
   readonly down_bar: "down_bar";
   readonly left: "left";
   readonly user: "user";
+  readonly input_wrapper: "input_wrapper";
+  readonly container: "container";
+  readonly collapse: "collapse";
+  readonly current: "current";
+  readonly servers: "servers";
   readonly username: "username";
   readonly status: "status";
-  readonly server_container: "server_container";
   readonly icon: "icon";
-  readonly title: "title";
   readonly name: "name";
   readonly users: "users";
 };
 export default classNames;
 export type ClassNames =
-  | "container"
+  | "collapsed"
   | "wrapper"
-  | "current"
+  | "server_container"
+  | "title"
   | "divider"
-  | "servers"
-  | "input_wrapper"
   | "details"
   | "down_bar"
   | "left"
   | "user"
+  | "input_wrapper"
+  | "container"
+  | "collapse"
+  | "current"
+  | "servers"
   | "username"
   | "status"
-  | "server_container"
   | "icon"
-  | "title"
   | "name"
   | "users";
