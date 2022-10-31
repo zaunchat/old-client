@@ -32,6 +32,9 @@ then
 $ npm run dev
 ```
 
+## 🐱‍🏍 How to contributes
+read [CONTRIBUTING](CONTRIBUTING.md)
+
 ## ✨ Contributors
 
 <a href="https://github.com/itchatapp/client/graphs/contributors">
