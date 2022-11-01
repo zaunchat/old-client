@@ -1,6 +1,5 @@
-on:
-    push:
-      branches: [ master ]
+name: Run Jest tests
+on: [push]
     
 jobs:
   install-tests:
