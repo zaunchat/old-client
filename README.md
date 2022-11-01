@@ -33,7 +33,7 @@ $ npm run dev
 ```
 
 ## 🐱‍🏍 How to contributes
-read [CONTRIBUTING](https://github.com/itchatapp/awesome-itchat/blob/main/contributing.mds)
+read [CONTRIBUTING](https://github.com/itchatapp/awesome-itchat/blob/main/contributing.md)
 
 ## ✨ Contributors
 
