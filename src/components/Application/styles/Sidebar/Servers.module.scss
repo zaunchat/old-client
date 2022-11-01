@@ -3,44 +3,66 @@
   height: 1px;
   background-color: #595959;
 }
+
+@mixin disappear {
+  opacity: 0;
+  z-index: -1;
+}
+
 .collapsed {
   min-width: 99px !important;
-  & > .wrapper {
-    & > div {
-      & > .server_container {
-        & > .title {
-          display: none;
+  width: 99px !important;
+
+  &>.wrapper {
+    & > .collapse {
+      rotate: 180deg;
+    }
+    &>div {
+      &>.server_container {
+        &>.title {
+          @include disappear;
         }
       }
     }
-    & > div {
-      & > .divider {
+    &>div {
+      &>.divider {
         width: 49px !important;
       }
     }
-    & > .details {
-      & > .down_bar {
-        & > .left {
-          & > .user {
-            display: none !important;
+
+    &>.details {
+      &>.down_bar {
+        &>.left {
+          &>.user {
+            @include disappear;
           }
         }
       }
     }
-    & > .input_wrapper {
-      & > input {
-        display: none;
+
+    &>.input_wrapper {
+      &>input {
+        display: none !important;
       }
     }
   }
 }
+
 .container {
   min-width: 305px;
+  width: 305px;
   height: 100%;
   background-color: #111111;
   display: flex;
   justify-content: center;
-  & > .wrapper {
+  transition: all 0.5s ease;
+
+  *>* {
+    transition: all 0.5s ease;
+
+  }
+
+  &>.wrapper {
     width: calc(100% - 50px);
     margin-block: 25px;
     display: grid;
@@ -48,7 +70,11 @@
     gap: 25px;
     flex-direction: column;
     position: relative;
-    & > .collapse {
+
+    &>.collapse {
+      &:hover {
+        scale: 1.2;
+      }
       cursor: pointer;
       position: absolute;
       right: calc(-25px - 13px);
@@ -63,27 +89,32 @@
       background-color: #ff4646;
       z-index: 100;
       bottom: 10px;
+      transition: all 0.5s ease;
     }
-    & > .current {
+
+    &>.current {
       display: flex;
       flex-direction: column;
       gap: 15px;
-      & > .divider {
+
+      &>.divider {
         @include divider;
       }
     }
-    & > .servers {
+
+    &>.servers {
       overflow-y: auto;
       display: flex;
       flex-direction: column;
       gap: 15px;
     }
-    & > .input_wrapper {
-      min-height: 40px;
-      min-width: 100%;
+
+    &>.input_wrapper {
+      height: 40px;
       background-color: #1c1c1c;
       border-radius: 5px;
-      & > input {
+
+      &>input {
         width: 100%;
         height: 100%;
         background-color: transparent;
@@ -95,34 +126,41 @@
         padding-left: 15px;
       }
     }
-    & > .details {
+
+    &>.details {
       width: 100%;
       height: 100%;
       display: flex;
       flex-direction: column;
       gap: 15px;
-      & > .divider {
+
+      &>.divider {
         @include divider;
       }
-      & > .down_bar {
+
+      &>.down_bar {
         height: 49px;
         width: 100%;
-        & > .left {
+
+        &>.left {
           height: 100%;
           width: 100%;
           display: flex;
           gap: 20px;
-          & > img {
+
+          &>img {
             border-radius: 100%;
             width: 49px;
             height: 100%;
           }
-          & > .user {
+
+          &>.user {
             height: 100%;
             display: flex;
             flex-direction: column;
             gap: 5px;
-            & > .username {
+
+            &>.username {
               font-family: Oswald;
               font-size: 16px;
               font-weight: 700;
@@ -131,7 +169,8 @@
               text-align: left;
               color: #ffd9d9;
             }
-            & > .status {
+
+            &>.status {
               font-family: Oswald;
               font-size: 12px;
               font-weight: 400;
@@ -146,18 +185,21 @@
     }
   }
 }
+
 .server_container {
   display: flex;
   gap: 20px;
-  & > .icon {
+
+  &>.icon {
     width: 49px;
     height: 49px;
     background: #1c1c1c;
     border-radius: 100%;
     outline: none;
   }
-  & > .title {
-    & > .name {
+
+  &>.title {
+    &>.name {
       height: 27px;
       font-family: "Oswald";
       font-style: normal;
@@ -165,11 +207,14 @@
       font-size: 18px;
       line-height: 27px;
     }
-    & > .users {
+
+    &>.users {
       display: flex;
-      & > div {
+
+      &>div {
         width: 10px;
-        & > img {
+
+        &>img {
           width: 15px;
           height: 15px;
           border-radius: 100%;

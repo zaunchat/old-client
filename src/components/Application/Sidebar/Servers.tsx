@@ -56,8 +56,8 @@ export function ServersSidebar() {
           <div class={styles.divider}></div>
         </div>
         <div class={styles.input_wrapper}>
-          <input placeholder="SERVERS SEARCH..." type="text" />
-          <span></span>
+          {/* <input placeholder="SERVERS SEARCH..." type="text" /> */}
+          {/* <span></span> */}
         </div>
         <div class={styles.servers}>
           <Server />

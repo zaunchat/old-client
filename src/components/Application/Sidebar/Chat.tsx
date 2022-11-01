@@ -5,11 +5,15 @@ import {
   ChatDocumentIcon,
   ChatVoiceMessageIcon,
 } from "../../assets/Application/Chat";
-import { useState } from "preact/hooks";
+import { useEffect, useRef, useState } from "preact/hooks";
 import { TextChannelFilledIcon } from "../../assets/Application/Channels";
 export function ChatSidebar() {
-  const [arr, setArr] = useState<string[]>(["Content example", "test"]);
+  const bottomRef = useRef(null);
+  const [arr, setArr] = useState<string[]>(["asdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsa","Content exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent example", "test",]);
   const [content, setContent] = useState("");
+  useEffect(() => {
+    bottomRef.current?.scrollIntoView({behavior: 'smooth'});
+  }, [arr]);
   return (
     <div className={styles.container}>
       <div class={styles.navbar}>
@@ -26,8 +30,8 @@ export function ChatSidebar() {
             <div>NEW</div>
             <span />
           </div>
-          {arr.map((t) => (
-            <div class={styles.message}>
+          {arr.map((t, i) => (
+            <div key={i} ref={i == arr.length-1 ? bottomRef : undefined} class={styles.message}>
               <img src="https://cdn.discordapp.com/avatars/456091385066553355/cf62b15be122834319756e88c75ce3d8.webp?size=96" />
               <div class={styles.wrapper}>
                 <div class={styles.username}>Mr.Kasper</div>

@@ -1,6 +1,7 @@
 declare const classNames: {
   readonly collapsed: "collapsed";
   readonly wrapper: "wrapper";
+  readonly collapse: "collapse";
   readonly server_container: "server_container";
   readonly title: "title";
   readonly divider: "divider";
@@ -10,7 +11,6 @@ declare const classNames: {
   readonly user: "user";
   readonly input_wrapper: "input_wrapper";
   readonly container: "container";
-  readonly collapse: "collapse";
   readonly current: "current";
   readonly servers: "servers";
   readonly username: "username";
@@ -23,6 +23,7 @@ export default classNames;
 export type ClassNames =
   | "collapsed"
   | "wrapper"
+  | "collapse"
   | "server_container"
   | "title"
   | "divider"
@@ -32,7 +33,6 @@ export type ClassNames =
   | "user"
   | "input_wrapper"
   | "container"
-  | "collapse"
   | "current"
   | "servers"
   | "username"
