@@ -43,4 +43,4 @@ read [CONTRIBUTING](CONTRIBUTING.md)
 
 
 ### 📝 License
-Refer to the [LICENSE](LICENSE) file.
+Refer to the [LICENSE](https://github.com/itchatapp/awesome-itchat/blob/main/contributing.md) file.
