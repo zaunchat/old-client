@@ -10,7 +10,7 @@ import { TextChannelFilledIcon } from '../../assets/Application/Channels';
 export function ChatSidebar() {
   const bottomRef = useRef(null);
   const [arr, setArr] = useState<string[]>([
-    `asdasdasdsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsa`,
+    `asdasdasdsad\n\n\nsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsa`,
     `Content exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent example`,
     `test`,
   ]);
@@ -65,6 +65,7 @@ export function ChatSidebar() {
             if (e.key === `Enter` && !e.shiftKey) {
               // Don't generate a new line
               e.preventDefault();
+              console.log(arr);
               setArr((ar) => [...ar, content]);
               setContent(``);
               // Do something else such as send the message to back-end
