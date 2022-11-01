@@ -33,7 +33,7 @@ $ npm run dev
 ```
 
 ## 🐱‍🏍 How to contributes
-read [CONTRIBUTING](CONTRIBUTING.md)
+read [CONTRIBUTING](https://github.com/itchatapp/awesome-itchat/blob/main/contributing.mds)
 
 ## ✨ Contributors
 
@@ -43,4 +43,4 @@ read [CONTRIBUTING](CONTRIBUTING.md)
 
 
 ### 📝 License
-Refer to the [LICENSE](https://github.com/itchatapp/awesome-itchat/blob/main/contributing.md) file.
+Refer to the [LICENSE](LICENSE) file.
