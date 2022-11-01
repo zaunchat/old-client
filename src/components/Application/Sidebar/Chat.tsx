@@ -1,47 +1,55 @@
-import { h } from "preact";
-import styles from "../styles/Sidebar/Chat.module.scss";
-import ReactTextareaAutosize from "react-textarea-autosize";
+import { h } from 'preact';
+import styles from '../styles/Sidebar/Chat.module.scss';
+import ReactTextareaAutosize from 'react-textarea-autosize';
 import {
   ChatDocumentIcon,
   ChatVoiceMessageIcon,
-} from "../../assets/Application/Chat";
-import { useEffect, useRef, useState } from "preact/hooks";
-import { TextChannelFilledIcon } from "../../assets/Application/Channels";
+} from '../../assets/Application/Chat';
+import { useEffect, useRef, useState } from 'preact/hooks';
+import { TextChannelFilledIcon } from '../../assets/Application/Channels';
 export function ChatSidebar() {
   const bottomRef = useRef(null);
-  const [arr, setArr] = useState<string[]>(["asdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsa","Content exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent example", "test",]);
-  const [content, setContent] = useState("");
+  const [arr, setArr] = useState<string[]>([
+    `asdasdasdsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsa`,
+    `Content exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent example`,
+    `test`,
+  ]);
+  const [content, setContent] = useState(``);
   useEffect(() => {
-    bottomRef.current?.scrollIntoView({behavior: 'smooth'});
+    bottomRef.current?.scrollIntoView({ behavior: `smooth` });
   }, [arr]);
   return (
     <div className={styles.container}>
-      <div class={styles.navbar}>
-        <div class={styles.left}>
-          <TextChannelFilledIcon w={"20"} />
-          <div class={styles.divider} />
+      <div className={styles.navbar}>
+        <div className={styles.left}>
+          <TextChannelFilledIcon w={`20`} />
+          <div className={styles.divider} />
           <div>Title</div>
         </div>
       </div>
-      <div class={styles.area}>
-        <div class={styles.white_space} />
-        <div class={styles.messages}>
-          <div class={styles.divider}>
+      <div className={styles.area}>
+        <div className={styles.white_space} />
+        <div className={styles.messages}>
+          <div className={styles.divider}>
             <div>NEW</div>
             <span />
           </div>
           {arr.map((t, i) => (
-            <div key={i} ref={i == arr.length-1 ? bottomRef : undefined} class={styles.message}>
+            <div
+              key={i}
+              ref={i == arr.length - 1 ? bottomRef : undefined}
+              className={styles.message}
+            >
               <img src="https://cdn.discordapp.com/avatars/456091385066553355/cf62b15be122834319756e88c75ce3d8.webp?size=96" />
-              <div class={styles.wrapper}>
-                <div class={styles.username}>Mr.Kasper</div>
-                <div class={styles.content}>{t}</div>
+              <div className={styles.wrapper}>
+                <div className={styles.username}>Mr.Kasper</div>
+                <div className={styles.content}>{t}</div>
               </div>
             </div>
           ))}
         </div>
       </div>
-      <div class={styles.input}>
+      <div className={styles.input}>
         <ReactTextareaAutosize
           placeholder="Type your message here..."
           value={content}
@@ -54,18 +62,18 @@ export function ChatSidebar() {
             shiftKey: any;
             preventDefault: any;
           }) => {
-            if (e.key === "Enter" && !e.shiftKey) {
+            if (e.key === `Enter` && !e.shiftKey) {
               // Don't generate a new line
               e.preventDefault();
               setArr((ar) => [...ar, content]);
-              setContent("");
+              setContent(``);
               // Do something else such as send the message to back-end
               // ...
             }
           }}
         />
-        <div class={styles.buttons}>
-          <div class={styles.wrapper}>
+        <div className={styles.buttons}>
+          <div className={styles.wrapper}>
             <div>
               <ChatVoiceMessageIcon />
             </div>

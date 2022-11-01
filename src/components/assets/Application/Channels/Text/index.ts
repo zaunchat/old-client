@@ -1,2 +1,2 @@
-export * from './Filled'
-export * from './Outlined'
+export * from './Filled';
+export * from './Outlined';

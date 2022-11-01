@@ -1,9 +1,9 @@
-import { h } from "preact";
+import { h } from 'preact';
 
-export function TextChannelFilledIcon({ w = "16" }: { w?: string }) {
+export function TextChannelFilledIcon({ w = `16` }: { w?: string }) {
   return (
     <svg
-      width= {w}
+      width={w}
       height={w}
       viewBox="0 0 17 18"
       fill="none"

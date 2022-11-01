@@ -1,2 +1,2 @@
-export * from './VoiceMessage'
-export * from './Document'
+export * from './VoiceMessage';
+export * from './Document';

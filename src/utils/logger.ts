@@ -1,7 +1,7 @@
-import chalk from "chalk";
+import chalk from 'chalk';
 
 interface ILoggerOptions {
-  state: "development" | "production";
+  state: 'development' | 'production';
 }
 
 interface IDefaultOptions {
@@ -10,13 +10,13 @@ interface IDefaultOptions {
   with_title?: boolean;
 }
 
-interface IInfoOptions extends IDefaultOptions {}
-interface IErrorOptions extends IDefaultOptions {}
-interface IDebugOptions extends IDefaultOptions {}
-interface IWarnOptions extends IDefaultOptions {}
+type IInfoOptions = IDefaultOptions;
+type IErrorOptions = IDefaultOptions;
+type IDebugOptions = IDefaultOptions;
+type IWarnOptions = IDefaultOptions;
 
 export class Logger {
-  state: ILoggerOptions["state"];
+  state: ILoggerOptions['state'];
   constructor(options: ILoggerOptions) {
     this.state = options.state;
   }
@@ -27,37 +27,43 @@ export class Logger {
     console.log(
       chalk.white`${
         options?.title
-          ? `[${options.with_title ? "INFO:" : ""}${options.title}]`
+          ? `[${options.with_title ? `INFO:` : ``}${options.title}]`
           : `[INFO]`
-      }:` + ` ${message}`
+      }:` + ` ${message}`,
     );
   }
   debug(message: string, options?: IDebugOptions) {
-    if (this.state == "production") return;
+    if (this.state == `production`) return;
     console.log(
       chalk.magenta`${
         options?.title
-          ? `[${options.with_title ? "DEBUG:" : ""}${options.title.toUpperCase()}]`
+          ? `[${
+              options.with_title ? `DEBUG:` : ``
+            }${options.title.toUpperCase()}]`
           : `[DEBUG]`
-      }` + `: ${message}`
+      }` + `: ${message}`,
     );
   }
   error(message: string, options?: IErrorOptions) {
     console.log(
       chalk.red`${
         options?.title
-          ? `[${options.with_title ? "ERROR:" : ""}${options.title.toUpperCase()}]`
+          ? `[${
+              options.with_title ? `ERROR:` : ``
+            }${options.title.toUpperCase()}]`
           : `[ERROR]`
-      }`+`: ${message}`
+      }` + `: ${message}`,
     );
   }
   warn(message: string, options?: IWarnOptions) {
     console.log(
       chalk.yellow`${
         options?.title
-          ? `[${options.with_title ? "WARN:" : ""}${options.title.toUpperCase()}]`
+          ? `[${
+              options.with_title ? `WARN:` : ``
+            }${options.title.toUpperCase()}]`
           : `[WARN]`
-      }`+`: ${message}`
+      }` + `: ${message}`,
     );
   }
 }

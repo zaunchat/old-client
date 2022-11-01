@@ -1,11 +1,10 @@
-import { render, h } from "preact";
-import { App } from "./containers/Router";
+import { render, h } from 'preact';
+import { App } from './containers/Router';
 
-if (process.env.NODE_ENV === "development") {
-  //@ts-ignore
-  import("../tests/__mocks__/browserMocks.ts").then(() => {
-    render(<App />, document.getElementById("app")!);
+if (process.env.NODE_ENV === `development`) {
+  import(`../tests/__mocks__/browserMocks.ts`).then(() => {
+    render(<App />, document.getElementById(`app`)!);
   });
 } else {
-  render(<App />, document.getElementById("app")!);
+  render(<App />, document.getElementById(`app`)!);
 }
