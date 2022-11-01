@@ -1,12 +1,33 @@
 {
     "files.exclude": {
         "**/.git": true,
+
+        // TO REDUCE DISTRACTION AND INCREASE IN FOCUS RATE
+        "**/.eslintrc": true,
+        "**/.gitignore": true,
+        "**/.npmrc": true,
+        "**/.releaserc": true,
+        "**/.commitlintrc.json": true,
+        "**/.prettierrc": true,
+        "**/CHANGELOG.md": true,
+        "**/pnpm-lock.yaml": true,
+        "**/.github": true,
+        "**/.husky": true,
+        "**/LICENSE": true,
+        "**/README.md": true,
+        "**/renovate.json": true,
+        "**/index.html": true,
+        "**/vite.config.ts": true,
+        "**/tsconfig.json": true,
+        // TO REDUCE DISTRACTION AND INCREASE IN FOCUS RATE
+
+
         "**/.svn": true,
         "**/.hg": true,
         "**/CVS": true,
         "**/.DS_Store": true,
         "**/Thumbs.db": true,
-        "**/node_modules": true
+        "**/node_modules": true,
     },
     "githubPullRequests.ignoredPullRequestBranches": [
         "master"
