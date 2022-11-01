@@ -8,7 +8,8 @@
     "serve": "sirv dist --cors --single",
     "lint": "eslint src",
     "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write",
-    "test": "jest"
+    "test": "jest",
+    "postinstall": "husky install"
   },
   "eslintConfig": {
     "parser": "@typescript-eslint/parser",
@@ -51,7 +52,8 @@
     "eslint-config-prettier": "8.5.0",
     "eslint-import-resolver-typescript": "3.4.2",
     "eslint-plugin-import": "2.26.0",
-    "eslint-plugin-prettier": "4.2.1"
+    "eslint-plugin-prettier": "4.2.1",
+    "husky": "8.0.1"
   },
   "jest": {
     "preset": "jest-preset-preact",
