@@ -11,6 +11,7 @@
   width: 0 !important;
   min-width: 0 !important;
   max-width: 0 !important;
+  padding: 0 !important;
 }
 
 .collapsed {
@@ -48,7 +49,10 @@
 
     & > .input_wrapper {
       & > input {
-        display: none !important;
+        @include disappear;
+      }
+      & > div {
+        cursor: pointer;
       }
     }
   }
@@ -116,10 +120,11 @@
     }
 
     & > .input_wrapper {
+      cursor: text;
       height: 40px;
       background-color: #1c1c1c;
       border-radius: 5px;
-
+      display: flex;
       & > input {
         width: 100%;
         height: 100%;
@@ -130,6 +135,12 @@
         font-style: normal;
         font-weight: 700;
         padding-left: 15px;
+      }
+      & > div {
+        width: 46px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     }
 
