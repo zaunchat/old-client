@@ -31,7 +31,7 @@ function Server() {
 }
 
 export function ServersSidebar() {
-  const searchInputRef = useRef(null);
+  const searchInputRef = useRef<HTMLInputElement>(null);
   const [collapse, setCollapse] = useState(false);
   return (
     <div className={`${styles.container} ${collapse ? styles.collapsed : ``}`}>
