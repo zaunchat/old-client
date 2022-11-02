@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/itchatapp/client/compare/v1.1.0...v1.1.1) (2022-11-02)
+
+
+### Bug Fixes
+
+* search input foucs needs visibility ([48cc8c0](https://github.com/itchatapp/client/commit/48cc8c0074dc45be4a1904a45584e7c111866d0c))
+
 # [1.1.0](https://github.com/itchatapp/client/compare/v1.0.0...v1.1.0) (2022-11-02)
 
 
