@@ -50,6 +50,7 @@
     & > .input_wrapper {
       & > input {
         @include disappear;
+        visibility: visible !important;
       }
       & > div {
         cursor: pointer;
