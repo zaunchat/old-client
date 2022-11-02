@@ -1,3 +1,15 @@
+# [1.1.0](https://github.com/itchatapp/client/compare/v1.0.0...v1.1.0) (2022-11-02)
+
+
+### Bug Fixes
+
+* add type to the ref ([df110fa](https://github.com/itchatapp/client/commit/df110faf9038614e958d0e5a69dc1d5ced3ef4ec))
+
+
+### Features
+
+* add search icon to search input ([6a6a2c4](https://github.com/itchatapp/client/commit/6a6a2c48f0f23659a2f455c4a46d1021876666a7))
+
 # 1.0.0 (2022-11-01)
 
 
