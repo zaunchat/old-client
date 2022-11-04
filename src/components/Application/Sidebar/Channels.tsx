@@ -7,14 +7,17 @@ import styles from '../styles/Sidebar/Channels.module.scss';
 function Channel({
   name,
   notification = false,
+  active,
 }: {
   name: string;
   notification?: boolean;
+  active: boolean;
 }) {
   return (
     <div className={styles.container}>
-      <div className={styles.channel}>
-        <TextChannelOutlinedIcon />
+      <div className={`${styles.channel} ${active ? styles.active : ``}`}>
+        {active ? <TextChannelFilledIcon /> : <TextChannelOutlinedIcon />}
+
         <div className={styles.title}>
           <div className={styles.name}>{name}</div>
           {notification && <div className={styles.notification} />}
@@ -37,7 +40,7 @@ export function ChannelsSidebar() {
       <div className={styles.wrapper}>
         <div className={styles.category}>MINECRAFT</div>
         <Channel name="Welcome" notification />
-        <Channel name="Memes" />
+        <Channel name="Memes" active />
         <Channel name="Games" notification />
       </div>
     </div>

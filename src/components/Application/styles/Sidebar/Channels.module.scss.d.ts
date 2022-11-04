@@ -6,6 +6,7 @@ declare const classNames: {
   readonly image: 'image';
   readonly wrapper: 'wrapper';
   readonly category: 'category';
+  readonly active: 'active';
   readonly channel: 'channel';
   readonly notification: 'notification';
   readonly name: 'name';
@@ -19,6 +20,7 @@ export type ClassNames =
   | 'image'
   | 'wrapper'
   | 'category'
+  | 'active'
   | 'channel'
   | 'notification'
   | 'name';
