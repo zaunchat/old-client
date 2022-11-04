@@ -8,6 +8,7 @@ export function ChannelsSidebar() {
   return (
     <div className={styles.container}>
       <div className={styles.banner}>
+        <div className={styles.shadowing} />
         <div className={styles.title}>ITCHAT PLATFORM</div>
         <img
           className={styles.image}
