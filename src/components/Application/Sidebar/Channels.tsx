@@ -4,6 +4,25 @@ import {
   TextChannelFilledIcon,
 } from '../../assets/Application/Channels/Text';
 import styles from '../styles/Sidebar/Channels.module.scss';
+function Channel({
+  name,
+  notification = false,
+}: {
+  name: string;
+  notification?: boolean;
+}) {
+  return (
+    <div className={styles.container}>
+      <div className={styles.channel}>
+        <TextChannelOutlinedIcon />
+        <div className={styles.title}>
+          <div className={styles.name}>{name}</div>
+          {notification && <div className={styles.notification} />}
+        </div>
+      </div>
+    </div>
+  );
+}
 export function ChannelsSidebar() {
   return (
     <div className={styles.container}>
@@ -17,13 +36,9 @@ export function ChannelsSidebar() {
       </div>
       <div className={styles.wrapper}>
         <div className={styles.category}>MINECRAFT</div>
-        <div className={styles.container}>
-          <div className={styles.channel}>
-            <TextChannelOutlinedIcon />
-            <div className={styles.title}>CODES</div>
-            {/* <div className={styles.notification}></div> */}
-          </div>
-        </div>
+        <Channel name="Welcome" notification />
+        <Channel name="Memes" />
+        <Channel name="Games" notification />
       </div>
     </div>
   );

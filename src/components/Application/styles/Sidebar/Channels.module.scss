@@ -56,18 +56,30 @@
         display: flex;
         align-items: center;
         gap: 11px;
-        width: calc(100% - 20px - 15px);
+        width: calc(100% - 20px - 30px);
         height: 32px;
         border-radius: 5px;
-        padding-left: 15px;
+        padding-inline: 15px;
         & > .title {
-          font-family: 'Oswald';
-          font-style: normal;
-          font-weight: 500;
-          font-size: 12px;
-          line-height: 18px;
-          /* identical to box height */
-          color: #aaaaaa;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          & > .notification {
+            border-radius: 100%;
+            background-color: #ff4646;
+            width: 8px;
+            height: 8px;
+          }
+          & > .name {
+            font-family: 'Oswald';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+            /* identical to box height */
+            color: #aaaaaa;
+          }
         }
       }
     }
