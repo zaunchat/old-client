@@ -1,3 +1,16 @@
+# [1.2.0](https://github.com/itchatapp/client/compare/v1.1.2...v1.2.0) (2022-11-04)
+
+
+### Bug Fixes
+
+* add hover state and active state ([f9efce5](https://github.com/itchatapp/client/commit/f9efce5c41a23d5489faa6c9b8112c5e50db2e21))
+* **types:** make active optional ([a62c50e](https://github.com/itchatapp/client/commit/a62c50ecc667a8feb5eff84d997f37e9d3d8f2fd))
+
+
+### Features
+
+* add notification label into channels ([479efb0](https://github.com/itchatapp/client/commit/479efb05556aa3da5a9b612df4355c2479111823))
+
 ## [1.1.2](https://github.com/itchatapp/client/compare/v1.1.1...v1.1.2) (2022-11-04)
 
 
