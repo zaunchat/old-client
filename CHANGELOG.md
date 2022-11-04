@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/itchatapp/client/compare/v1.1.1...v1.1.2) (2022-11-04)
+
+
+### Bug Fixes
+
+* add shadowing into server banner ([1c8ef96](https://github.com/itchatapp/client/commit/1c8ef96948a3ac78d22828171890f7c910820dde))
+
 ## [1.1.1](https://github.com/itchatapp/client/compare/v1.1.0...v1.1.1) (2022-11-02)
 
 
