@@ -11,7 +11,7 @@ function Channel({
 }: {
   name: string;
   notification?: boolean;
-  active: boolean;
+  active?: boolean;
 }) {
   return (
     <div className={styles.container}>
