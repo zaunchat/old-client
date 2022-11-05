@@ -6,7 +6,7 @@ import {
   ChatVoiceMessageIcon,
 } from '../../assets/Application/Chat';
 import { useEffect, useRef, useState } from 'preact/hooks';
-import { TextChannelFilledIcon } from '../../assets/Application/Channels';
+import { Navbar } from './components/Chat';
 export function ChatSidebar() {
   const bottomRef = useRef(null);
   const [arr, setArr] = useState<string[]>([
@@ -20,13 +20,7 @@ export function ChatSidebar() {
   }, [arr]);
   return (
     <div className={styles.container}>
-      <div className={styles.navbar}>
-        <div className={styles.left}>
-          <TextChannelFilledIcon w={`20`} />
-          <div className={styles.divider} />
-          <div>Title</div>
-        </div>
-      </div>
+      <Navbar />
       <div className={styles.area}>
         <div className={styles.white_space} />
         <div className={styles.messages}>
