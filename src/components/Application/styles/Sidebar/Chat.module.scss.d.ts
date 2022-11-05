@@ -12,6 +12,7 @@ declare const classNames: {
   readonly white_space: 'white_space';
   readonly input: 'input';
   readonly buttons: 'buttons';
+  readonly rich: 'rich';
 };
 export default classNames;
 export type ClassNames =
@@ -27,4 +28,5 @@ export type ClassNames =
   | 'content'
   | 'white_space'
   | 'input'
-  | 'buttons';
+  | 'buttons'
+  | 'rich';
