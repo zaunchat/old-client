@@ -4,7 +4,14 @@ import { defineConfig } from "vite";
 import preact from "@preact/preset-vite";
 import sassDts from "vite-plugin-sass-dts";
 
+import path from "path";
+
 export default defineConfig({
+  "resolve": {
+    alias: {
+      "@": path.resolve(__dirname, "./src")
+    }
+  },
   "optimizeDeps": {
     "esbuildOptions": {
       "target": "es2020"

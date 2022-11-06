@@ -11,6 +11,7 @@
     "esModuleInterop": true,
     "baseUrl": "./",
     "paths": {
+      "@/*": ["./src/*"],
       "react": ["./node_modules/preact/compat"],
       "react-dom": ["./node_modules/preact/compat"]
     },
