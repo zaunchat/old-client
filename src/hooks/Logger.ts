@@ -1,6 +1,6 @@
 import { createContext } from 'preact';
 import { useContext } from 'preact/hooks';
-import { Logger } from '../utils';
+import { Logger } from '@/utils';
 
 const logger = new Logger({ state: `development` });
 
