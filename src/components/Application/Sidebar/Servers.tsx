@@ -1,15 +1,12 @@
 import { h } from 'preact';
 import { useRef, useState } from 'preact/hooks';
-import {
-  ServersArrowIcon,
-  ServersSearchIcon,
-} from '../../assets/Application/Servers';
 import styles from '../styles/Sidebar/Servers.module.scss';
 import {
   CurrentServer,
   Servers,
   SearchInput,
   UserDetails,
+  CollapseButton,
 } from './components/Servers';
 
 export function ServersSidebar() {
@@ -18,12 +15,7 @@ export function ServersSidebar() {
   return (
     <div className={`${styles.container} ${collapse ? styles.collapsed : ``}`}>
       <div className={styles.wrapper}>
-        <button
-          onClick={() => setCollapse((c) => !c)}
-          className={styles.collapse}
-        >
-          <ServersArrowIcon />
-        </button>
+        <CollapseButton setCollapse={setCollapse} />
         <CurrentServer />
         <SearchInput
           searchInputRef={searchInputRef}
