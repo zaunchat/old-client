@@ -3,8 +3,8 @@ import ReactTextareaAutosize from 'react-textarea-autosize';
 import {
   ChatDocumentIcon,
   ChatVoiceMessageIcon,
-} from '../../../../assets/Application/Chat';
-import styles from '../../../styles/Sidebar/Chat.module.scss';
+} from '@/components/assets/Application/Chat';
+import styles from '@/components/Application/styles/Sidebar/Chat.module.scss';
 
 export function TextField({ content, setContent, arr, setArr }: any) {
   return (

@@ -1,6 +1,6 @@
 import { h } from 'preact';
 import { TextChannelFilledIcon } from '../../../../../components/assets/Application/Channels';
-import styles from '../../../styles/Sidebar/Chat.module.scss';
+import styles from '@/components/Application/styles/Sidebar/Chat.module.scss';
 
 export function Navbar() {
   return (

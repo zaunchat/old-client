@@ -2,8 +2,8 @@ import { h } from 'preact';
 import {
   TextChannelFilledIcon,
   TextChannelOutlinedIcon,
-} from '../../../../assets/Application/Channels';
-import styles from '../../../styles/Sidebar/Channels.module.scss';
+} from '@/components/assets/Application/Channels';
+import styles from '@/components/Application/styles/Sidebar/Channels.module.scss';
 
 export function Channel({
   name,

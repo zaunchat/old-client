@@ -1,6 +1,6 @@
 import { h } from 'preact';
 import { useRef, useState } from 'preact/hooks';
-import styles from '../styles/Sidebar/Servers.module.scss';
+import styles from '@/components/Application/styles/Sidebar/Servers.module.scss';
 import {
   CurrentServer,
   Servers,

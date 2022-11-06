@@ -1,6 +1,6 @@
 import { h } from 'preact';
-import { ServersSearchIcon } from '../../../../assets/Application/Servers';
-import styles from '../../../styles/Sidebar/Servers.module.scss';
+import { ServersSearchIcon } from '@/components/assets/Application/Servers';
+import styles from '@/components/Application/styles/Sidebar/Servers.module.scss';
 export function SearchInput({ searchInputRef, setCollapse, collapse }: any) {
   return (
     <div className={styles.input_wrapper}>

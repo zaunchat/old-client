@@ -1,10 +1,10 @@
 import { h } from 'preact';
-import styles from '../../styles/Application.module.scss';
+import styles from '@/containers/styles/Application.module.scss';
 import {
   ChatSidebar,
   ServersSidebar,
   ChannelsSidebar,
-} from '../../../components/Application';
+} from '@/components/Application';
 export function Application() {
   return (
     <div className={styles.container}>

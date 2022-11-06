@@ -1,5 +1,5 @@
 import { h } from 'preact';
-import styles from '../../../styles/Sidebar/Chat.module.scss';
+import styles from '@/components/Application/styles/Sidebar/Chat.module.scss';
 
 function DividerMessage() {
   return (

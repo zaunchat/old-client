@@ -1,5 +1,5 @@
 import { h } from 'preact';
-import styles from '../styles/Sidebar/Channels.module.scss';
+import styles from '@/components/Application/styles/Sidebar/Channels.module.scss';
 import { Channel, Category, Banner } from './components/Channels';
 
 export function ChannelsSidebar() {

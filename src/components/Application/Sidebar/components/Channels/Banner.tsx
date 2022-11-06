@@ -1,5 +1,5 @@
 import { h } from 'preact';
-import styles from '../../../styles/Sidebar/Channels.module.scss';
+import styles from '@/components/Application/styles/Sidebar/Channels.module.scss';
 export function Banner({ url, title }: { title: string; url: string }) {
   return (
     <div className={styles.banner}>

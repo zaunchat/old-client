@@ -1,5 +1,5 @@
 import { h } from 'preact';
-import styles from '../styles/Login.module.scss';
+import styles from '@/containers/styles/Login.module.scss';
 
 function ItChat() {
   return (

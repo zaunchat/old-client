@@ -1,5 +1,5 @@
 import { h } from 'preact';
-import styles from '../../../styles/Sidebar/Servers.module.scss';
+import styles from '@/components/Application/styles/Sidebar/Servers.module.scss';
 export function UserDetails() {
   return (
     <div className={styles.details}>
