@@ -51,7 +51,7 @@ const Yes = () => {
       <Editable
         renderElement={renderElement}
         onKeyDown={(event) => {
-          if (event.key === `\`` && event.ctrlKey) {
+          if (event.key === `\``) {
             event.preventDefault();
             // Determine whether any of the currently selected blocks are code blocks.
             const [match] = Editor.nodes(editor, {

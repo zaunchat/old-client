@@ -3,7 +3,7 @@
         "**/.git": true,
 
         // TO REDUCE DISTRACTION AND INCREASE IN FOCUS RATE
-        "**/.eslintrc": true,
+        // "**/.eslintrc": true,
         "**/.gitignore": true,
         "**/.npmrc": true,
         "**/.releaserc": true,
@@ -18,7 +18,7 @@
         "**/renovate.json": true,
         "**/index.html": true,
         "**/vite.config.ts": true,
-        "**/tsconfig.json": true,
+        // "**/tsconfig.json": true,
         // TO REDUCE DISTRACTION AND INCREASE IN FOCUS RATE
 
 

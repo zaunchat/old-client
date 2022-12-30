@@ -1,7 +1,6 @@
 import { h } from 'preact';
 import styles from '../styles/Sidebar/Chat.module.scss';
 import { Prism } from '../../../utils/Prism';
-import ReactTextareaAutosize from 'react-textarea-autosize';
 import { css } from '@emotion/css';
 import {
   ChatDocumentIcon,
@@ -11,57 +10,87 @@ import { useCallback, useEffect, useRef, useState } from 'preact/hooks';
 import { TextChannelFilledIcon } from '../../assets/Application/Channels';
 
 import { Slate, Editable, withReact } from 'slate-react';
-import { createEditor, Transforms, Editor, Text } from 'slate';
+import { createEditor, Text } from 'slate';
+import { CodeEditor } from './CodeBlock';
 
 const initialValue = [
   {
     type: `paragraph`,
-    children: [{ text: `A line of text in a paragraph.` }],
+    children: [{ text: `\`\`\`js\nconsole.log("test")\`\`\`` }],
   },
 ];
 
 const Leaf = ({ attributes, children, leaf }) => {
+  if (leaf.code) {
+    return (
+      <span {...attributes} className={`token ${leaf.prism_token}`}>
+        <pre className="code-block" {...attributes}>
+          <code>{children}</code>
+        </pre>
+      </span>
+    );
+  }
   return (
     <span
       {...attributes}
-      className={css`
-        font-weight: ${leaf.bold && `bold`};
-        font-style: ${leaf.italic && `italic`};
-        text-decoration: ${leaf.underlined && `underline`};
-        ${leaf.title &&
-        css`
-          display: inline-block;
-          font-weight: bold;
-          font-size: 20px;
-          margin: 20px 0 10px 0;
-        `}
-        ${leaf.list &&
-        css`
-          padding-left: 10px;
-          font-size: 20px;
-          line-height: 10px;
-        `}
-      ${leaf.hr &&
-        css`
-          display: block;
-          text-align: center;
-          border-bottom: 2px solid #ddd;
-        `}
-      ${leaf.blockquote &&
-        css`
-          display: inline-block;
-          border-left: 2px solid #ddd;
-          padding-left: 10px;
-          color: #aaa;
-          font-style: italic;
-        `}
-      ${leaf.code &&
-        css`
-          font-family: monospace;
-          background-color: #eee;
-          padding: 3px;
-        `}
-      `}
+      className={`${leaf.code && leaf.prism_token}
+      ${css(`
+    font-weight: ${leaf.bold && `bold`};
+    font-style: ${leaf.italic && `italic`};
+    text-decoration: ${leaf.underlined && `underline`};
+    ${
+      leaf.code &&
+      css`
+        width: 100%;
+        background-color: red;
+        /* font-family: monospace; */
+      `
+    }
+    ${
+      leaf.title &&
+      css`
+        display: inline-block;
+        font-weight: bold;
+        font-size: 20px;
+        margin: 20px 0 10px 0;
+      `
+    }
+    ${
+      leaf[`url-reference`] &&
+      css`
+        background-color: red;
+        display: inline-block;
+        font-weight: bold;
+        font-size: 20px;
+        margin: 20px 0 10px 0;
+      `
+    }
+    ${
+      leaf.list &&
+      css`
+        padding-left: 10px;
+        font-size: 20px;
+        line-height: 10px;
+      `
+    }
+  ${
+    leaf.hr &&
+    css`
+      display: block;
+      text-align: center;
+      border-bottom: 2px solid #ddd;
+    `
+  }
+  ${
+    leaf.blockquote &&
+    css`
+      display: inline-block;
+      border-left: 2px solid #ddd;
+      padding-left: 10px;
+      color: #aaa;
+      font-style: italic;
+    `
+  }`)}`}
     >
       {children}
     </span>
@@ -85,12 +114,11 @@ function RichEditor() {
 
   const decorate = useCallback(([node, path]) => {
     const ranges = [];
-
     if (!Text.isText(node)) {
       return ranges;
     }
 
-    const getLength = (token) => {
+    const getLength = (token: any) => {
       if (typeof token === `string`) {
         return token.length;
       } else if (typeof token.content === `string`) {
@@ -99,11 +127,12 @@ function RichEditor() {
         return token.content.reduce((l, t) => l + getLength(t), 0);
       }
     };
-
     const tokens = Prism.tokenize(node.text, Prism.languages.markdown);
+    console.log(tokens);
     let start = 0;
 
     for (const token of tokens) {
+      console.log(token.type);
       const length = getLength(token);
       const end = start + length;
 
@@ -144,30 +173,6 @@ function RichEditor() {
         onKeyDown={(event: any) => {
           if (!event.ctrlKey) {
             return;
-          }
-          switch (event.key) {
-            case `\``: {
-              event.preventDefault();
-              const [match] = Editor.nodes(editor, {
-                match: (n) => n.type === `code`,
-              });
-              Transforms.setNodes(
-                editor,
-                { type: match ? null : `code` },
-                { match: (n) => Editor.isBlock(editor, n) },
-              );
-              break;
-            }
-
-            case `b`: {
-              event.preventDefault();
-              Transforms.setNodes(
-                editor,
-                { bold: true },
-                { match: (n) => Text.isText(n), split: true },
-              );
-              break;
-            }
           }
         }}
       />

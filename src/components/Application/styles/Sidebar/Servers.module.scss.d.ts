@@ -15,6 +15,7 @@ declare const classNames: {
   readonly servers: 'servers';
   readonly username: 'username';
   readonly status: 'status';
+  readonly dot: 'dot';
   readonly icon: 'icon';
   readonly name: 'name';
   readonly users: 'users';
@@ -37,6 +38,7 @@ export type ClassNames =
   | 'servers'
   | 'username'
   | 'status'
+  | 'dot'
   | 'icon'
   | 'name'
   | 'users';

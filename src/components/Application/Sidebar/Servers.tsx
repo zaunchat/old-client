@@ -5,6 +5,7 @@ import styles from '../styles/Sidebar/Servers.module.scss';
 function Server() {
   return (
     <div className={styles.server_container}>
+      <div class={styles.dot} />
       <img
         className={styles.icon}
         src="https://avatars.githubusercontent.com/u/89282165?s=280&v=4"
@@ -89,6 +90,23 @@ export function ServersSidebar() {
           </div>
         </div>
         <div className={styles.servers}>
+          <Server />
+          <Server />
+          <Server />
+          <Server />
+          <Server />
+          <Server />
+          <Server />
+          <Server />
+          <Server />
+          <Server />
+          <Server />
+          <Server />
+          <Server />
+          <Server />
+          <Server />
+          <Server />
+          <Server />
           <Server />
           <Server />
           <Server />
