@@ -10,9 +10,9 @@ import { TextChannelFilledIcon } from '../../assets/Application/Channels';
 export function ChatSidebar() {
   const bottomRef = useRef(null);
   const [arr, setArr] = useState<string[]>([
-    `asdasdasdsad\n\n\nsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsaasdasdadsadsa`,
-    `Content exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent exampleContent example`,
-    `test`,
+    `Hello everyone!`,
+    `I can't wait!!`,
+    `it's ITCHAT!!`,
   ]);
   const [content, setContent] = useState(``);
   useEffect(() => {

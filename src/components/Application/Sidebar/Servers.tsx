@@ -2,25 +2,22 @@ import { h } from 'preact';
 import { useRef, useState } from 'preact/hooks';
 import styles from '../styles/Sidebar/Servers.module.scss';
 
-function Server() {
+function Server({ name, icon }: { name: string; icon: string }) {
   return (
     <div className={styles.server_container}>
-      <img
-        className={styles.icon}
-        src="https://avatars.githubusercontent.com/u/89282165?s=280&v=4"
-      />
+      <img className={styles.icon} src={icon} />
       <div className={styles.title}>
-        <div className={styles.name}>ITCHAT APPLICATION</div>
+        <div className={styles.name}>{name}</div>
         <div className={styles.users}>
           <div>
             <img
-              src="https://cdn.discordapp.com/avatars/897225796232548353/4df7b648d63de1a7ae69fd0a553baa40.webp?size=96"
+              src="https://cdn.discordapp.com/avatars/508449321176268801/e2d249a2ea1151fb05b54a377dce104c.webp?size=240"
               alt=""
             />
           </div>
           <div>
             <img
-              src="https://cdn.discordapp.com/avatars/607169194257022996/88329aea0f9413c9171078711cc2eb21.webp?size=96"
+              src="https://cdn.discordapp.com/avatars/508449321176268801/e2d249a2ea1151fb05b54a377dce104c.webp?size=240"
               alt=""
             />
           </div>
@@ -55,7 +52,10 @@ export function ServersSidebar() {
           </svg>
         </button>
         <div className={styles.current}>
-          <Server />
+          <Server
+            icon="https://avatars.githubusercontent.com/u/89282165?s=280&v=4"
+            name="ITCHAT PLATFORM"
+          />
           <div className={styles.divider}></div>
         </div>
         <div className={styles.input_wrapper}>
@@ -89,17 +89,24 @@ export function ServersSidebar() {
           </div>
         </div>
         <div className={styles.servers}>
-          <Server />
-          <Server />
-          <Server />
-          <Server />
-          <Server />
+          <Server
+            name="Miecraft"
+            icon="https://cdn.discordapp.com/attachments/1035544695205535795/1058478351846752336/f57264688f01a9597e7ddd5c9c716b8a.png"
+          />
+          <Server
+            name="GTA V"
+            icon="https://media.discordapp.net/attachments/845334392994136065/1058477876128796842/21515-256x256x32.png"
+          />
+          <Server
+            name="ITCHAT PLATFORM"
+            icon="https://avatars.githubusercontent.com/u/89282165?s=280&v=4"
+          />
         </div>
         <div className={styles.details}>
           <div className={styles.divider} />
           <div className={styles.down_bar}>
             <div className={styles.left}>
-              <img src="https://cdn.discordapp.com/avatars/607169194257022996/88329aea0f9413c9171078711cc2eb21.webp?size=96" />
+              <img src="https://cdn.discordapp.com/avatars/508449321176268801/e2d249a2ea1151fb05b54a377dce104c.webp?size=240" />
               <div className={styles.user}>
                 <div className={styles.username}>Mr.Kasper</div>
                 <div className={styles.status}>HELLO WORLD</div>

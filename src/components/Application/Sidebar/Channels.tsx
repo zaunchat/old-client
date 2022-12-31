@@ -38,7 +38,7 @@ export function ChannelsSidebar() {
         />
       </div>
       <div className={styles.wrapper}>
-        <div className={styles.category}>MINECRAFT</div>
+        <div className={styles.category}>GENERAL</div>
         <Channel name="Welcome" notification />
         <Channel name="Memes" active />
         <Channel name="Games" notification />
