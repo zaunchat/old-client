@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/itchatapp/client/compare/v1.2.0...v1.2.1) (2022-12-31)
+
+
+### Bug Fixes
+
+* idk ([df0c7dd](https://github.com/itchatapp/client/commit/df0c7dde4c3bbfba6f6f9c7fc9a530b6f8548914))
+
 # [1.2.0](https://github.com/itchatapp/client/compare/v1.1.2...v1.2.0) (2022-11-04)
 
 
